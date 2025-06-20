@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "백엔드 개발자 포트폴리오",
-  description: "미니멀 & 모노크롬 테마 포트폴리오",
+  title: "김승원 포트폴리오",
+  description: "포트폴리오",
 };
 
 export default function RootLayout({
