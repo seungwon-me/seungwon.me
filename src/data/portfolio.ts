@@ -130,5 +130,11 @@ export const portfolioData: PortfolioData = {
       description: "한국산업인력공단",
       icon: "📜"
     }
+  ],
+  portfolioLinks: [
+    { label: "Notion 포트폴리오", url: "https://seungwon-portfolio.notion.site" }
+  ],
+  portfolioFiles: [
+    { label: "PDF 다운로드", fileUrl: "/portfolio.pdf" }
   ]
 }; 

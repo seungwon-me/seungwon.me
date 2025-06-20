@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
+import { ExternalLink, Download } from "lucide-react";
 
 export default function Home() {
   return (
@@ -220,6 +221,56 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-body-sm text-[var(--text-secondary)]">{cert.description}</p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Portfolio Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+      >
+        <h2 className="section-title">Portfolio</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {portfolioData.portfolioLinks?.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
+            >
+              <ExternalLink className="w-6 h-6 text-[var(--primary-blue)] flex-shrink-0" />
+              <div className="flex-1">
+                <div className="font-semibold text-body-lg">{item.label}</div>
+              </div>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-auto px-3 py-1 rounded bg-[var(--primary-light)] text-[var(--primary-blue)] font-medium"
+              >
+                바로가기
+              </a>
+            </div>
+          ))}
+          {portfolioData.portfolioFiles?.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
+            >
+              <Download className="w-6 h-6 text-[var(--primary-blue)] flex-shrink-0" />
+              <div className="flex-1">
+                <div className="font-semibold text-body-lg">{item.label}</div>
+              </div>
+              <a
+                href={item.fileUrl}
+                download
+                className="ml-auto px-3 py-1 rounded bg-[var(--primary-light)] text-[var(--primary-blue)] font-medium"
+              >
+                다운로드
+              </a>
             </div>
           ))}
         </div>

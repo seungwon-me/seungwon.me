@@ -45,6 +45,16 @@ export interface Certification {
   icon?: string;
 }
 
+export interface PortfolioLink {
+  label: string;
+  url: string;
+}
+
+export interface PortfolioFile {
+  label: string;
+  fileUrl: string;
+}
+
 export interface PortfolioData {
   name: string;
   title: string;
@@ -57,4 +67,6 @@ export interface PortfolioData {
   education: Education[];
   awards: Award[];
   certifications: Certification[];
+  portfolioLinks?: PortfolioLink[];
+  portfolioFiles?: PortfolioFile[];
 } 
