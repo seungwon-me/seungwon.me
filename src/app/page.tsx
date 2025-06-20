@@ -1,103 +1,229 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { portfolioData } from "@/data/portfolio";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col gap-24 py-8">
+      {/* Hero Section */}
+      <motion.section
+        className="flex flex-col md:flex-row gap-8 items-start justify-between fade-in"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="flex flex-col gap-4">
+          <div className="flex items-baseline gap-4 border-b border-current pb-2">
+            <h1 className="text-[42px] leading-[48px] font-bold">{portfolioData.name}</h1>
+            <span className="text-h2 font-light">{portfolioData.title}</span>
+          </div>
+          <p className="text-body-lg text-[var(--text-secondary)] mt-2 mb-2">{portfolioData.subtitle}</p>
+          <div className="flex flex-col gap-1 text-body-sm">
+            <span className="info-item">
+              Email: <a href={`mailto:${portfolioData.contact.email}`} className="font-medium">{portfolioData.contact.email}</a>
+            </span>
+            <span className="info-item">
+              Phone: <a href={`tel:${portfolioData.contact.phone}`} className="font-medium">{portfolioData.contact.phone}</a>
+            </span>
+            <span className="info-item">
+              GitHub: <a href={`https://${portfolioData.contact.github}`} target="_blank" rel="noopener noreferrer" className="font-medium">{portfolioData.contact.github}</a>
+            </span>
+            <span className="info-item">
+              LinkedIn: <a href={`https://${portfolioData.contact.linkedin}`} target="_blank" rel="noopener noreferrer" className="font-medium">{portfolioData.contact.linkedin}</a>
+            </span>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+        {/* Profile Image */}
+        <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+          {portfolioData.profileImageUrl ? (
+            <Image
+              src={portfolioData.profileImageUrl}
+              alt="프로필 이미지"
+              fill
+              className="object-cover"
+              priority
+            />
+          ) : (
+            <div className="w-full h-full border-2 border-[var(--border)] bg-[var(--bg-secondary)] flex items-center justify-center">
+              <span className="text-[var(--text-secondary)] text-body-sm">프로필 이미지</span>
+            </div>
+          )}
+        </div>
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        <h2 className="section-title">About</h2>
+        <p className="text-body-lg mt-2 whitespace-pre-line">
+          {portfolioData.about}
+        </p>
+      </motion.section>
+
+      {/* Projects Section - List Format */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <h2 className="section-title">Projects</h2>
+        <div className="mt-8 space-y-8">
+          {portfolioData.projects.map((project) => (
+            <div 
+              key={project.id}
+              className={`flex flex-col gap-6 p-6 border ${
+                project.isActive ? 'border-l-2 border-l-[var(--primary-blue)]' : ''
+              } border-[var(--border)] bg-[var(--bg-secondary)]`}
+            >
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-h3 font-semibold">{project.title}</h3>
+                  <span className={`text-caption ${
+                    project.isActive ? 'text-[var(--primary-blue)]' : 'text-[var(--text-secondary)]'
+                  }`}>
+                    {project.period}
+                  </span>
+                </div>
+                <p className="text-body mb-3 whitespace-pre-line">{project.description}</p>
+                <div className="mb-3">
+                  <div className="text-body-sm font-medium mb-1">주요 기여:</div>
+                  <ul className="text-body-sm text-[var(--text-secondary)] list-disc list-inside space-y-1">
+                    {project.contributions.map((contribution, index) => (
+                      <li key={index}>{contribution}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  {project.websiteUrl && (
+                    <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="text-body-sm">Web-site</a>
+                  )}
+                  {project.codeUrl && (
+                    <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="text-body-sm">Code</a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Tech Stack Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <h2 className="section-title">Tech Stack</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {portfolioData.techStack.map((category, index) => (
+            <div key={index}>
+              <div className="font-semibold mb-2">{category.category}</div>
+              <div className="border-b border-[var(--border)] mb-2" />
+              <div className="flex flex-wrap gap-2">
+                {category.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Education Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <h2 className="section-title">Education</h2>
+        <div className="mt-6 space-y-6">
+          {portfolioData.education.map((edu, index) => (
+            <div key={index} className="p-4 border border-[var(--border)] bg-[var(--bg-secondary)]">
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-h3 font-semibold">{edu.school}</h3>
+                  <span className="text-caption text-[var(--text-secondary)]">{edu.period}</span>
+                </div>
+                <p className="text-body-sm text-[var(--text-secondary)] mb-1">{edu.major}</p>
+                {edu.gpa && <p className="text-body-sm">학점: {edu.gpa}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Awards & Activities Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <h2 className="section-title">Awards & Activities</h2>
+        <div className="mt-6 space-y-4">
+          {portfolioData.awards.map((award, index) => (
+            <div key={index} className="flex items-start gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)]">
+              <div className="w-16 h-16 flex-shrink-0 border border-[var(--border)] bg-[var(--bg-primary)] flex items-center justify-center">
+                <span className="text-[var(--text-secondary)] text-caption">{award.icon || '🏆'}</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-1">
+                  <h3 className="text-h3 font-semibold">{award.title}</h3>
+                  <span className="text-caption text-[var(--text-secondary)]">{award.period}</span>
+                </div>
+                <p className="text-body-sm text-[var(--text-secondary)] whitespace-pre-line">{award.description}</p>
+                {award.details && <p className="text-body-sm">{award.details}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Certifications Section */}
+      <motion.section
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <h2 className="section-title">Certifications</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {portfolioData.certifications.map((cert, index) => (
+            <div key={index} className="p-4 border border-[var(--border)] bg-[var(--bg-secondary)]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-12 h-12 border border-[var(--border)] bg-[var(--bg-primary)] flex items-center justify-center">
+                  <span className="text-[var(--text-secondary)] text-caption">{cert.icon || '📜'}</span>
+                </div>
+                <div>
+                  <h3 className="text-h3 font-semibold">{cert.title}</h3>
+                  <p className="text-caption text-[var(--text-secondary)]">{cert.date}</p>
+                </div>
+              </div>
+              <p className="text-body-sm text-[var(--text-secondary)]">{cert.description}</p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+    </main>
   );
 }
