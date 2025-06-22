@@ -3,18 +3,12 @@ from = "/*"
 to = "/index.html"
 status = 200
 
-# Netlify 빌드 설정을 위한 전역 설정
 [build]
-  # Next.js 프로젝트가 있는 기본 디렉토리
   base = "portfolio-app"
   
-  # 프로젝트를 빌드하는 명령어
   command = "npm run build"
   
-  # 빌드 결과물이 생성되는 디렉토리
   publish = ".next"
 
-# Next.js 런타임 플러그인 설정
-# 이 플러그인은 이미지 최적화, 리다이렉트 등 Next.js의 기능을 Netlify에서 사용 가능하게 합니다.
 [[plugins]]
   package = "@netlify/plugin-nextjs" 
