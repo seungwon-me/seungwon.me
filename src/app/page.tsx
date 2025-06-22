@@ -72,7 +72,7 @@ export default function Home() {
         className="fade-in"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 className="section-title">Projects</h2>
