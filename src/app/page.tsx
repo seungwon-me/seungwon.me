@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
-import { ExternalLink, Download } from "lucide-react";
 
 export default function Home() {
   return (
@@ -241,7 +240,6 @@ export default function Home() {
               key={idx}
               className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
             >
-              <ExternalLink className="w-6 h-6 text-[var(--primary-blue)] flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-body-lg">{item.label}</div>
               </div>
@@ -249,7 +247,7 @@ export default function Home() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto px-3 py-1 rounded bg-[var(--primary-light)] text-[var(--primary-blue)] font-medium"
+                className="ml-auto text-[var(--primary-blue)] font-medium"
               >
                 바로가기
               </a>
@@ -260,14 +258,13 @@ export default function Home() {
               key={idx}
               className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
             >
-              <Download className="w-6 h-6 text-[var(--primary-blue)] flex-shrink-0" />
               <div className="flex-1">
                 <div className="font-semibold text-body-lg">{item.label}</div>
               </div>
               <a
                 href={item.fileUrl}
                 download
-                className="ml-auto px-3 py-1 rounded bg-[var(--primary-light)] text-[var(--primary-blue)] font-medium"
+                className="ml-auto text-[var(--primary-blue)] font-medium"
               >
                 다운로드
               </a>

@@ -37,8 +37,8 @@ const config: Config = {
         warning: '#f59e0b',
         error: '#ef4444',
         // 다크 테마용
-        'bg-primary-dark': '#0a0a0a',
-        'bg-secondary-dark': '#1a1a1a',
+        'bg-primary-dark': '#1a1a1a',
+        'bg-secondary-dark': '#2a2a2a',
         'text-primary-dark': '#ffffff',
         'text-secondary-dark': '#cccccc',
         'border-dark': '#333333',
