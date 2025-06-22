@@ -28,7 +28,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]`}
       >
-        <div className="w-full flex justify-end items-center py-4 px-4">
+        <div className="w-full flex justify-end items-center py-4 px-4 space-x-6">
+          <a
+            href="https://seungwon.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--text-secondary)] hover:text-[var(--primary-blue)] transition-colors"
+          >
+            Blog
+          </a>
           <ThemeToggle />
         </div>
         <div className="container mx-auto max-w-[1000px] px-4 md:px-10 lg:px-16">
