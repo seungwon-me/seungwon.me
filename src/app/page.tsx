@@ -238,7 +238,7 @@ export default function Home() {
           {portfolioData.portfolioLinks?.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
+              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)]"
             >
               <div className="flex-1">
                 <div className="font-semibold text-body-lg">{item.label}</div>
@@ -256,7 +256,7 @@ export default function Home() {
           {portfolioData.portfolioFiles?.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)] rounded"
+              className="flex items-center gap-4 p-4 border border-[var(--border)] bg-[var(--bg-secondary)]"
             >
               <div className="flex-1">
                 <div className="font-semibold text-body-lg">{item.label}</div>
