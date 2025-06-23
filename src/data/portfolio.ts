@@ -58,8 +58,9 @@ export const portfolioData: PortfolioData = {
       title: "Daemawiki (DSM Wiki Service)",
       period: "2024.06 ~ 2025.02",
       description: `대마위키는 대덕소프트웨어마이스터고등학교 학생들을 위한 정보 공유 플랫폼입니다.
-                    학생들이 작성한 이력서는 PDF로 변환되어 학교와 MOU를 체결한 기업들에 배포됩니다.
-                    현재 130명 이상의 학생이 활발히 사용 중인 서비스입니다.`,
+                    Spring WebFlux 기반의 리액티브 웹 애플리케이션으로 구축되어, 
+                    높은 성능과 효율적인 리소스 관리를 목표로 설계되었습니다.
+                    현재는 운영 준비 중이며, 개발 완료 후 내부 테스트를 거쳐 서비스될 예정입니다.`,
       contributions: [
         "Mono.when을 사용한 사용자 인가 관리 메서드 병렬 처리",
         "메일 전송에 Fire-and-Forget 패턴을 도입해 이벤트 기반으로 응답 시간 개선",
