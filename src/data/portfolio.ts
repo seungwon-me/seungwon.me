@@ -4,8 +4,8 @@ export const portfolioData: PortfolioData = {
   name: "김승원",
   title: "Backend Developer",
   subtitle: "안녕하세요! 백엔드 개발에서 사용자 경험의 본질을 찾는 개발자 김승원입니다.",
-  about: 
-  `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
+  about:
+    `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
   사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
 
   🧠 Spring Webflux(Project Reactor), React 경험으로 문제를 
@@ -16,7 +16,7 @@ export const portfolioData: PortfolioData = {
 
   🚀 마이스터고 졸업예정자로서 2026년 졸업 후
   산업기능요원 현역 신규 편입을 통해 적극적으로 기여할 수 있습니다.`,
-  
+
   contact: {
     email: "contact@seungwon.me",
     phone: "+82-10-2977-8517",
