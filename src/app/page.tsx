@@ -8,7 +8,6 @@ import { EducationSection } from "./components/education-section";
 import { AwardsSection } from "./components/awards-section";
 import { CertificationsSection } from "./components/certifications-section";
 import { OpenSourceSection } from "./components/open-source-section";
-import { CareerSection } from "./components/career-section";
 
 export default function Home() {
   return (
