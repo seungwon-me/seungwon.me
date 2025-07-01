@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]`}
       >
-        <div className="w-full flex justify-end items-center py-4 px-4 space-x-6">
+        <div className="w-full flex justify-end items-center py-4 px-6 space-x-6">
           <a
             href="https://seungwon.tech"
             target="_blank"
