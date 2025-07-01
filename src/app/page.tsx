@@ -8,6 +8,7 @@ import { EducationSection } from "./components/education-section";
 import { AwardsSection } from "./components/awards-section";
 import { CertificationsSection } from "./components/certifications-section";
 import { OpenSourceSection } from "./components/open-source-section";
+import { CareerSection } from "./components/career-section";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
           {portfolioData.about}
         </p>
       </Section>
+
+      {/* Career Section */}
+      {/* <CareerSection /> */}
 
       {/* Projects Section */}
       <ProjectsSection />
@@ -36,7 +40,7 @@ export default function Home() {
 
       {/* Education Section */}
       <EducationSection />
-      
+
       {/* Certifications Section */}
       <CertificationsSection />
     </main>

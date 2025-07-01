@@ -70,6 +70,14 @@ export type OpenSourceRepo = {
   prs: OpenSourcePR[];
 };
 
+export interface Career {
+  company: string;
+  position: string;
+  period: string;
+  description?: string;
+  companyLogoUrl?: string;
+}
+
 export type PortfolioData = {
   name: string;
   title: string;
@@ -85,4 +93,5 @@ export type PortfolioData = {
   portfolioLinks?: PortfolioLink[];
   portfolioFiles?: PortfolioFile[];
   openSourceContributions?: OpenSourceRepo[];
+  careers?: Career[];
 }; 

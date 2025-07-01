@@ -229,4 +229,20 @@ export const portfolioData: PortfolioData = {
       ]
     }
   ],
+  // careers: [
+  //   {
+  //     company: "주식회사 예시컴퍼니",
+  //     position: "백엔드 개발자",
+  //     period: "2022.03 ~ 2023.12",
+  //     description: "Spring Boot 기반의 REST API 개발 및 유지보수, 대용량 트래픽 처리 경험.",
+  //     companyLogoUrl: "/vercel.svg"
+  //   },
+  //   {
+  //     company: "스타트업 샘플",
+  //     position: "풀스택 엔지니어",
+  //     period: "2021.01 ~ 2022.02",
+  //     description: "React와 Node.js를 활용한 서비스 기획 및 개발, AWS 인프라 관리.",
+  //     companyLogoUrl: "/next.svg"
+  //   }
+  // ],
 }; 
