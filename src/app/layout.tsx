@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/app/theme-toggle";
+import ScrollStatusIndicator from "@/app/scroll-status-indicator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,12 @@ export default function RootLayout({
             Blog
           </a>
           <ThemeToggle />
+        </div>
+        {/* Custom Scroll Bar */}
+        <div className="fixed right-0 top-0 h-full flex flex-col items-end z-50 pointer-events-none">
+          <div className="relative h-[40vh] mt-[24vh] flex flex-col items-center justify-center">
+            <ScrollStatusIndicator />
+          </div>
         </div>
         <div className="container mx-auto max-w-[1000px] px-4 md:px-10 lg:px-16">
           {children}
