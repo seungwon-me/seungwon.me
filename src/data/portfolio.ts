@@ -124,11 +124,11 @@ export const portfolioData: PortfolioData = {
   techStack: [
     {
       category: "Languages",
-      technologies: ["Java", "Kotlin"]
+      technologies: ["Java", "Kotlin", "TypeScript"]
     },
     {
       category: "Frameworks",
-      technologies: ["Spring Boot", "Spring Security", "Spring Webflux", "Spring RSocket"]
+      technologies: ["Spring Boot", "Spring Security", "Spring Webflux"]
     },
     {
       category: "Database",

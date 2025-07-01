@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
 import { HeroSection } from "./components/hero-section";
 import { ProjectsSection } from "./components/projects-section";
