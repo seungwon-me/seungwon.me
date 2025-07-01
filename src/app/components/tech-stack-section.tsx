@@ -10,7 +10,7 @@ export function TechStackSection() {
         {portfolioData.techStack.map((category) => (
           <div
             key={category.category}
-            className="bg-[var(--bg-secondary)] rounded-lg overflow-hidden border border-[var(--border)]"
+            className="bg-[var(--bg-secondary)] rounded-[12px] overflow-hidden border border-[var(--border)]"
           >
             <div className="p-6">
               <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">{category.category}</h3>

@@ -11,7 +11,7 @@ function ProjectCard({ project, onSelect }: { project: Project; onSelect: () => 
     <motion.div
       layoutId={`card-${project.id}`}
       onClick={onSelect}
-      className="relative h-60 rounded-lg overflow-hidden cursor-pointer group"
+      className="relative h-60 rounded-[12px] overflow-hidden cursor-pointer group"
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     >
       <motion.img
@@ -44,7 +44,7 @@ function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDese
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onDeselect}>
       <motion.div
         layoutId={`card-${project.id}`}
-        className="relative max-w-5xl w-full max-h-[90vh] bg-[var(--bg-secondary)] rounded-xl overflow-hidden"
+        className="relative max-w-5xl w-full max-h-[90vh] bg-[var(--bg-secondary)] rounded-[12px] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <motion.button onClick={onDeselect} className="absolute top-4 right-4 text-white/70 hover:text-white z-20">
