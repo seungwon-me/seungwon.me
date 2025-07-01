@@ -54,63 +54,6 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.section-title {
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 8px;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 8px;
-}
-
-.info-item {
-  font-family: monospace;
-  font-size: 14px;
-  color: #666666;
-}
-
-.project-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-@media (min-width: 768px) {
-  .project-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .project-card {
-    width: calc(50% - 12px);
-  }
-}
-@media (min-width: 1024px) {
-  .project-card {
-    width: calc(33.333% - 16px);
-  }
-}
-
-.project-card {
-  border: 1px solid var(--border);
-  border-radius: 0px;
-  padding: 24px;
-  background: var(--bg-secondary);
-  transition: border-color 0.2s ease;
-}
-.project-card:hover {
-  border-color: var(--primary-blue);
-}
-.project-card.active {
-  border-left: 2px solid var(--primary-blue);
-}
-
-.tech-tag {
-  font-family: monospace;
-  font-size: 12px;
-  padding: 4px 8px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text-secondary);
-}
-
 a {
   color: var(--primary-blue);
   transition: color 0.2s ease;
@@ -121,12 +64,4 @@ a:hover {
 
 button {
   transition: all 0.2s ease;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.fade-in.visible {
-  opacity: 1;
 }

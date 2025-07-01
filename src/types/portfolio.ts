@@ -8,6 +8,7 @@ export interface ContactInfo {
 export interface Project {
   id: string;
   title: string;
+  tagline?: string;
   period: string;
   description: string;
   contributions: string[];

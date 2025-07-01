@@ -5,8 +5,7 @@ export const portfolioData: PortfolioData = {
   title: "Backend Developer",
   subtitle: "안녕하세요! 백엔드 개발에서 사용자 경험의 본질을 찾는 개발자 김승원입니다.",
   about: 
-  `
-  👋 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
+  `👋 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
   사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
 
   😀 복잡한 로직을 단순화하고, 
@@ -31,7 +30,8 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: "repo",
-      title: "REPO (DSM Resume Management Platform)",
+      title: "REPO",
+      tagline: "이력서 관리부터 기업 배포까지, 학생들의 취업 여정을 위한 올인원 플랫폼",
       period: "2024.01 ~ 2024.09",
       description: `레포는 대덕소프트웨어마이스터고 학생들을 위한 이력서 작성 및 관리 플랫폼입니다.
                     학생들이 작성한 이력서는 PDF로 변환되어 학교와 MOU를 체결한 기업들에 배포됩니다.
@@ -45,15 +45,16 @@ export const portfolioData: PortfolioData = {
         "전공 관리, 조회 API 개발",
         "도서관 조회 API 개발"
       ],
-      technologies: ["Java", "Spring Boot", "MongoDB", "Redis"],
+      technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis"],
       websiteUrl: "https://www.dsm-repo.com/",
       codeUrl: "https://github.com/DSM-repo",
-      imageUrl: "/repo_logo.png",
+      imageUrl: "/repo-project-image.png",
       isActive: false
     },
     {
       id: "daemawiki",
-      title: "Daemawiki (DSM Wiki Service)",
+      title: "Daemawiki",
+      tagline: "지식의 연결과 공유, 대마고 학생들을 위한 대마위키",
       period: "2024.06 ~ 2025.02",
       description: `대마위키는 대덕소프트웨어마이스터고등학교 학생들을 위한 정보 공유 플랫폼입니다.
                     Spring WebFlux 기반의 리액티브 웹 애플리케이션으로 구축되어, 
@@ -67,9 +68,56 @@ export const portfolioData: PortfolioData = {
         "유저 인가 인증 API 개발",
         "유저 메일 인증 관리 API 개발"
       ],
-      technologies: ["Java", "Spring WebFlux", "Spring RSocket", "MongoDB", "Redis", "AWS S3"],
+      technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3"],
       codeUrl: "https://github.com/daemawiki",
-      // imageUrl: "/project2-logo.jpg", // 실제 이미지 경로로 변경
+      imageUrl: "/daemawiki-project-image.png",
+      isActive: false
+    },
+    {
+      id: "founderz",
+      title: "FOUNDERZ",
+      tagline: "청년 창업가와 투자자를 연결하는 종합 플랫폼",
+      period: "2024.05 ~ 2024.11",
+      description: `FOUNDERZ는 청년 창업가와 투자자를 연결하는 종합 플랫폼입니다. 
+      아이디어 게시, 투자 계약 자동화, 법적 서류 관리 등 창업 과정의 복잡성을 간소화합니다. 
+      투명한 투자 관리와 맞춤형 추천 시스템을 통해 안전하고 
+      효율적인 창업 생태계를 구축하며, 청년 창업가들의 성공적인 창업을 지원합니다. 
+      창업과 투자의 모든 단계를 한 곳에서 해결할 수 있는 플랫폼입니다.`,
+      contributions: [
+        "Domain Driven Design 기반 도메인 설계",
+        "SSE 기반 실시간 알림 시스템 구축",
+        "유저 인가 인증 API 개발",
+        "유저 관리 API 개발",
+        "사업 아이템 태그 관리 API 개발",
+        "유저 관심사 태그 관리 API 개발",
+        "프론트엔드 API 연동 함수 개발",
+        "백엔드 개발 가이드 작성"
+      ],
+      technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "Redis", "Paseto"],
+      codeUrl: "https://github.com/teamFOUNDERZ",
+      imageUrl: "/founderz-project-image.png",
+      isActive: false
+    },
+    {
+      id: "hhh",
+      title: "HHH",
+      tagline: "AI 기반 이별 후유증 극복 서비스",
+      period: "2025.03 ~ 2025.06",
+      description: `HHH는 AI 기반 이별 후유증 극복 서비스로 개인화된 감정 관리 앱을 제공합니다.
+      사용자의 감정을 체계적으로 기록하고 시각화하여 감정 변화를 인식하도록 돕고, 
+      이별 후 감정 회복을 위한 맞춤형 가이드를 제공하여 심리적 안정감을 증진합니다.`,
+      contributions: [
+        "서비스 기획",
+        "백엔드 문서 작성",
+        "유저 인가 인증 API 개발",
+        "유저 관리 API 개발",
+        "감정 일기 관리 API 개발",
+        "감정 변화 그래프 API 개발",
+        "감정 이모지 관리 API 개발",
+      ],
+      technologies: ["Kotlin", "Spring WebFlux", "Spring Security", "MongoDB", "Paseto"],
+      codeUrl: "https://github.com/Hurts-Hearts-Healing/HHH_BE",
+      imageUrl: "/hhh-project-image.png",
       isActive: false
     },
   ],
@@ -79,11 +127,11 @@ export const portfolioData: PortfolioData = {
       technologies: ["Java", "Kotlin"]
     },
     {
-      category: "Frameworks & Libraries",
+      category: "Frameworks",
       technologies: ["Spring Boot", "Spring Security", "Spring Webflux", "Spring RSocket"]
     },
     {
-      category: "Database & Cache",
+      category: "Database",
       technologies: ["MySQL", "MongoDB", "Redis"]
     }
   ],
