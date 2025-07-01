@@ -128,7 +128,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Frameworks",
-      technologies: ["Spring Boot", "Spring Security", "Spring Webflux"]
+      technologies: ["Spring Boot", "Spring Security", "Spring Webflux", "Hibernate"]
     },
     {
       category: "Database",
