@@ -42,7 +42,7 @@ export const portfolioData: PortfolioData = {
         "전공 관리, 조회 API 개발",
         "도서관 조회 API 개발"
       ],
-      technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis"],
+      technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis", "JWT"],
       websiteUrl: "https://www.dsm-repo.com/",
       codeUrl: "https://github.com/DSM-repo",
       imageUrl: "/repo-project-image.png",
@@ -65,7 +65,7 @@ export const portfolioData: PortfolioData = {
         "유저 인가 인증 API 개발",
         "유저 메일 인증 관리 API 개발"
       ],
-      technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3"],
+      technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3", "Paseto"],
       codeUrl: "https://github.com/daemawiki",
       imageUrl: "/daemawiki-project-image.png",
       isActive: false
