@@ -73,6 +73,11 @@ function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDese
               >
                 {project.tagline}
               </motion.p>
+              <motion.p
+                className="text-base text-gray-200 mt-1 font-mono"
+              >
+                기간: {project.period}
+              </motion.p>
             </div>
           </div>
           
