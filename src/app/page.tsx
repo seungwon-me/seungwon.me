@@ -7,6 +7,7 @@ import { TechStackSection } from "./components/tech-stack-section";
 import { EducationSection } from "./components/education-section";
 import { AwardsSection } from "./components/awards-section";
 import { CertificationsSection } from "./components/certifications-section";
+import { OpenSourceSection } from "./components/open-source-section";
 
 export default function Home() {
   return (
@@ -27,12 +28,15 @@ export default function Home() {
       {/* Tech Stack Section */}
       <TechStackSection />
 
-      {/* Education Section */}
-      <EducationSection />
+      {/* Open Source Section */}
+      <OpenSourceSection />
 
       {/* Awards & Activities Section */}
       <AwardsSection />
 
+      {/* Education Section */}
+      <EducationSection />
+      
       {/* Certifications Section */}
       <CertificationsSection />
     </main>

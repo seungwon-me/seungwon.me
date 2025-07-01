@@ -56,7 +56,21 @@ export interface PortfolioFile {
   fileUrl: string;
 }
 
-export interface PortfolioData {
+export type OpenSourcePR = {
+  title: string;
+  date: string;
+  description: string;
+  url?: string;
+};
+
+export type OpenSourceRepo = {
+  repoName: string;
+  repoLogoUrl?: string;
+  repoUrl?: string;
+  prs: OpenSourcePR[];
+};
+
+export type PortfolioData = {
   name: string;
   title: string;
   subtitle: string;
@@ -70,4 +84,5 @@ export interface PortfolioData {
   certifications: Certification[];
   portfolioLinks?: PortfolioLink[];
   portfolioFiles?: PortfolioFile[];
-} 
+  openSourceContributions?: OpenSourceRepo[];
+}; 

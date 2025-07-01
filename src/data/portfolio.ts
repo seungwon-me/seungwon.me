@@ -5,19 +5,16 @@ export const portfolioData: PortfolioData = {
   title: "Backend Developer",
   subtitle: "안녕하세요! 백엔드 개발에서 사용자 경험의 본질을 찾는 개발자 김승원입니다.",
   about: 
-  `👋 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
+  `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
   사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
 
-  😀 복잡한 로직을 단순화하고, 
-  안정적인 서비스를 제공하는 사용자 중심 서비스를 만들고 싶습니다.
-
-  🥳 Spring Webflux(Project Reactor), React 경험으로 문제를 
+  🧠 Spring Webflux(Project Reactor), React 경험으로 문제를 
   Fuctional하게 분석하고 순수(Pure)하게 처리할 수 있습니다.
 
-  😊 현재 IC로 일하고 있지만, 
-  레포 백엔드 개발 팀의 리드 경험이 있습니다.
+  👥 현재 IC로 일하고 있지만, 
+  백엔드 개발 팀의 리딩하며 코드 품질을 관리한 경험이 있습니다.
 
-  👀 마이스터고 졸업예정자로서 2026년 졸업 후
+  🚀 마이스터고 졸업예정자로서 2026년 졸업 후
   산업기능요원 현역 신규 편입을 통해 적극적으로 기여할 수 있습니다.`,
   
   contact: {
@@ -151,19 +148,17 @@ export const portfolioData: PortfolioData = {
       icon: "🏆"
     },
     {
-      title: "오픈소스 기여",
-      period: "진행중",
-      description: `- 2025.04.23 redis/lettuce #3262
-                    - 2025.01.06 redis/lettuce #3061
-                    - 2024.11.25 kestra-io/kestra #6073
-                    - 2024.10.08 velog-io/velog #49`,
+      title: "대회 참여",
+      period: "",
+      description: `* 대한민국 소프트웨어대전 소프트웨이브 2024 프로젝트 전시
+      * Software Future & Dream Challenge 2024 본선 진출
+      * 2024 빛가람 에너지밸리 소프트웨어 작품 경진대회 본선 진출`,
       icon: "👨‍💻"
     },
     {
-      title: "스터디 운영",
-      period: "2024.08 - 2024.11",
-      description: "스프링 웹 플럭스 스터디 그룹 리더",
-      details: "주 1회 스터디 진행, 멤버 5명 관리",
+      title: "스프링 웹 플럭스 스터디 운영",
+      period: "2024.08 ~ 2024.11",
+      description: "주 1회 스터디 진행, 멤버 5명 관리",
       icon: "👥"
     }
   ],
@@ -186,5 +181,52 @@ export const portfolioData: PortfolioData = {
   ],
   portfolioFiles: [
     { label: "PDF 다운로드", fileUrl: "/portfolio.pdf" }
-  ]
+  ],
+  openSourceContributions: [
+    {
+      repoName: "redis/lettuce",
+      repoLogoUrl: "/redis-logo.png",
+      repoUrl: "https://github.com/redis/lettuce",
+      prs: [
+        {
+          title: "#3262",
+          date: "2025.04.23",
+          description: "불필요한 컬렉션 생성을 제거하여 메모리 할당 없이 성능 향상",
+          url: "https://github.com/redis/lettuce/pull/3262"
+        },
+        {
+          title: "#3061",
+          date: "2025.01.06",
+          description: "Stream API, flatMapMany(Flux::fromIterable)을 사용해 Functional하게 처리",
+          url: "https://github.com/redis/lettuce/pull/3061"
+        }
+      ]
+    },
+    {
+      repoName: "kestra-io/kestra",
+      repoLogoUrl: "/kestra-logo.png",
+      repoUrl: "https://github.com/kestra-io/kestra",
+      prs: [
+        {
+          title: "#6073",
+          date: "2024.11.25",
+          description: "instanceof 패턴 매칭을 사용해 코드 일관성 향상",
+          url: "https://github.com/kestra-io/kestra/pull/6073"
+        }
+      ]
+    },
+    {
+      repoName: "velog-io/velog",
+      repoLogoUrl: "/velog-logo.png",
+      repoUrl: "https://github.com/velog-io/velog",
+      prs: [
+        {
+          title: "#49",
+          date: "2024.10.08",
+          description: "화이트 모드 text 요소 에러 수정",
+          url: "https://github.com/velog-io/velog/pull/49"
+        }
+      ]
+    }
+  ],
 }; 
