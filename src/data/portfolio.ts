@@ -42,6 +42,13 @@ export const portfolioData: PortfolioData = {
         "전공 관리, 조회 API 개발",
         "도서관 조회 API 개발"
       ],
+      retrospective: `사용자(전교생)를 대상으로 직접 운영을 해보면서 ‘그저 기능 구현-배포은 전체 개발의 30% 밖에 안되었구나’를 깨달았습니다. 
+      
+      처음에는 백엔드 리드 개발자로서 아키텍처 개선(RP), 성능 최적화(Java VT), 도메인 설계(DDD) 등에 집중했는데, 프로젝트가 진행될수록 단순히 많은 사람들이 "좋은 코드"라 칭하는 것을 작성하는 것만으로는 부족하다는 것을 절실히 깨달았습니다.
+      
+      실제로 운영을 하며 매번 변경, 추가되는 요구사항에 대한 즉각적인 개발을 해야했고, 사용자가 실제로 겪는 문제를 해결하는 것이 진짜 개발의 핵심이라는 것을 배웠습니다.
+      
+      레포 프로젝트를 통해 단순한 기능 개발자가 아닌, 사용자의 문제를 해결하는 개발자로 성장하는 방법을 배웠습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis", "JWT"],
       websiteUrl: "https://www.dsm-repo.com/",
       codeUrl: "https://github.com/DSM-repo",
@@ -65,6 +72,14 @@ export const portfolioData: PortfolioData = {
         "유저 인가 인증 API 개발",
         "유저 메일 인증 관리 API 개발"
       ],
+      retrospective: `처음엔 Spring MVC의 스레드 풀 방식이 납득되지 않아 WebFlux를 도입했지만, 
+      오히려 복잡한 구조로 인해 오히려 생산성이 떨어지는 문제를 겪었습니다. 
+      이 경험을 통해 새로운 기술은 도입 자체보다 트레이드오프, 그리고 실질적 효과가 더 중요하다는 점을 느꼈습니다.
+
+      WebFlux의 동작 원리를 깊이 이해하고 싶어 Project Reactor, Netty까지 학습했고, Redis/Lettuce의 Reactive Command 부분의 오픈소스에도 기여했습니다. 
+      기술적으로는 큰 성장의 계기였지만, 무조건적인 비동기 구조가 성능 개선으로 이어지지 않는다는 현실적 인사이트도 얻었습니다.
+
+      단순히 새로운 걸 해보는 것을 넘어, 어떤 기술이 서비스에 어떻게 기여할 수 있을지 고민하는 태도가 개발자로서 더 중요하다는 걸 배운 프로젝트였습니다.`,
       technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3", "Paseto"],
       codeUrl: "https://github.com/daemawiki",
       imageUrl: "/daemawiki-project-image.png",
@@ -90,6 +105,13 @@ export const portfolioData: PortfolioData = {
         "프론트엔드 API 연동 함수 개발",
         "백엔드 개발 가이드 작성"
       ],
+      retrospective: `도메인 주도 설계를 처음 적용했을 땐, 책과 블로그에서 본 개념을 그대로 가져와 사용했습니다. 하지만 결과적으로 불필요하게 복잡한 구조를 만들었고, 팀원 간 소통에도 문제가 생겨 개발 초기 안정성이 떨어지는 아쉬움이 있었습니다.
+      
+      이 경험을 통해 ‘기술을 도입할 때 무엇을 해결하고 싶은지, 서비스에 어떻게 기여를 하는지’를 먼저 고민해야 한다는 것을 배웠습니다.
+      
+      이후에는 우리 팀의 개발 방식에 적합한 개념만 선별하고 단순화해 적용했습니다.또한, Gradle 멀티 모듈 구조를 도입할 때는 팀원들의 이해를 돕기 위해 개발 가이드를 직접 문서화하고 공유했습니다.
+
+      이 과정을 통해 기술의 난이도보다 팀이 함께 이해하고 유지할 수 있는 구조가 더 중요하다는 사실을 체감했고, 기술 도입의 관점을 실무적으로 바꿀 수 있었습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "Redis", "Paseto"],
       codeUrl: "https://github.com/teamFOUNDERZ",
       imageUrl: "/founderz-project-image.png",
