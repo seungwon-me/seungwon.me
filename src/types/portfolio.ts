@@ -5,19 +5,19 @@ export interface ContactInfo {
   linkedin: string;
 }
 
-export interface Project {
+export type Project = {
   id: string;
   title: string;
-  tagline?: string;
+  tagline: string;
   period: string;
   description: string;
   contributions: string[];
+  retrospective?: string;
   technologies: string[];
-  websiteUrl?: string;
+  imageUrl: string;
   codeUrl?: string;
-  imageUrl?: string;
-  isActive?: boolean;
-}
+  websiteUrl?: string;
+};
 
 export interface TechStack {
   category: string;
