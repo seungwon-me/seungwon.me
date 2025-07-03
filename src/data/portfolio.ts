@@ -178,6 +178,11 @@ export const portfolioData: PortfolioData = {
       icon: "👨‍💻"
     },
     {
+      title: "교내 신입생 전공 분야 멘토링",
+      period: "2025.03",
+      description: "약 23시간, 신입생 약 64명 멘토링 진행"
+    },
+    {
       title: "스프링 웹 플럭스 스터디 운영",
       period: "2024.08 ~ 2024.11",
       description: "주 1회 스터디 진행, 멤버 5명 관리",
