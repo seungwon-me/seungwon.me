@@ -17,6 +17,7 @@ export type Project = {
   imageUrl: string;
   codeUrl?: string;
   websiteUrl?: string;
+  isActive?: boolean;
 };
 
 export interface TechStack {
