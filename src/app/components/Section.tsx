@@ -19,4 +19,4 @@ export function Section({ title, children }: SectionProps) {
       {children}
     </motion.section>
   );
-} 
+}
