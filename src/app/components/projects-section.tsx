@@ -120,19 +120,29 @@ function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDese
                   ))}
                 </div>
                 
-                <h4 className="text-xl font-semibold text-[var(--text-primary)] mb-4">Links</h4>
-                <div className="flex flex-col gap-4">
-                  {project.websiteUrl && (
-                    <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base text-[var(--text-primary)] hover:text-[var(--primary-blue)] transition-colors font-medium">
-                      <LinkIcon size={18} /> Website
-                    </a>
-                  )}
-                  {project.codeUrl && (
-                    <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base text-[var(--text-primary)] hover:text-[var(--primary-blue)] transition-colors font-medium">
-                      <Github size={18} /> Code
-                    </a>
-                  )}
-                </div>
+                {project.links && project.links.length > 0 && (
+                  <>
+                    <h4 className="text-xl font-semibold text-[var(--text-primary)] mb-4">Links</h4>
+                    <div className="flex flex-col gap-4">
+                      {project.links.map((link, index) => (
+                        <a
+                          key={index}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 text-base text-[var(--text-primary)] hover:text-[var(--primary-blue)] transition-colors font-medium"
+                        >
+                          {link.label.toLowerCase().includes("github") || link.label.toLowerCase().includes("code") ? (
+                            <Github size={18} />
+                          ) : (
+                            <LinkIcon size={18} />
+                          )}{" "}
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

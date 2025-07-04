@@ -18,6 +18,7 @@ export type Project = {
   codeUrl?: string;
   websiteUrl?: string;
   isActive?: boolean;
+  links?: PortfolioLink[];
 };
 
 export interface TechStack {

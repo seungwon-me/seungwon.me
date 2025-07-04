@@ -50,10 +50,15 @@ export const portfolioData: PortfolioData = {
       
       레포 프로젝트를 통해 단순한 기능 개발자가 아닌, 사용자의 문제를 해결하는 개발자로 성장하는 방법을 배웠습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis", "JWT"],
-      websiteUrl: "https://www.dsm-repo.com/",
-      codeUrl: "https://github.com/DSM-repo",
+      
       imageUrl: "/repo-project-image.png",
-      isActive: false
+      isActive: false,
+      links: [
+        { label: "Website", url: "https://www.dsm-repo.com/" },
+        { label: "GitHub", url: "https://github.com/DSM-repo" },
+        { label: "Sample", url: "https://www.dsm-repo.com/resume_viewer/66dc4344fcaf9157ccc2e3fd" },
+        { label: "Use Guide", url: "https://shiny-laser-4b7.notion.site/REPO-f1d309ebf8344edd8f95a15a76130c5f" }
+      ]
     },
     {
       id: "daemawiki",
@@ -81,9 +86,12 @@ export const portfolioData: PortfolioData = {
 
       단순히 새로운 걸 해보는 것을 넘어, 어떤 기술이 서비스에 어떻게 기여할 수 있을지 고민하는 태도가 개발자로서 더 중요하다는 걸 배운 프로젝트였습니다.`,
       technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3", "Paseto"],
-      codeUrl: "https://github.com/daemawiki",
+      
       imageUrl: "/daemawiki-project-image.png",
-      isActive: false
+      isActive: false,
+      links: [
+        { label: "GitHub", url: "https://github.com/daemawiki" }
+      ]
     },
     {
       id: "founderz",
@@ -113,9 +121,13 @@ export const portfolioData: PortfolioData = {
 
       이 과정을 통해 기술의 난이도보다 팀이 함께 이해하고 유지할 수 있는 구조가 더 중요하다는 사실을 체감했고, 기술 도입의 관점을 실무적으로 바꿀 수 있었습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "Redis", "Paseto"],
-      codeUrl: "https://github.com/teamFOUNDERZ",
+      
       imageUrl: "/founderz-project-image.png",
-      isActive: false
+      isActive: false,
+      links: [
+        { label: "GitHub", url: "https://github.com/teamFOUNDERZ" },
+        { label: "Backend Develop Guide", url: "https://classy-magpie-b57.notion.site/1341137e5c7b81e396eae9195099d829" }
+      ]
     },
     {
       id: "hhh",
@@ -135,9 +147,13 @@ export const portfolioData: PortfolioData = {
         "감정 이모지 관리 API 개발",
       ],
       technologies: ["Kotlin", "Spring WebFlux", "Spring Security", "MongoDB", "Paseto"],
-      codeUrl: "https://github.com/Hurts-Hearts-Healing/HHH_BE",
+      
       imageUrl: "/hhh-project-image.png",
-      isActive: false
+      isActive: false,
+      links: [
+        { label: "GitHub", url: "https://github.com/Hurts-Hearts-Healing/HHH_BE" },
+        { label: "Develop Documents", url: "https://orange-middle-cbd.notion.site/Document-22669c2ee7df804db389c2e29f06c3c6" }
+      ]
     },
   ],
   techStack: [
