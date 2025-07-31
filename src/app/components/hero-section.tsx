@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Globe } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
 const iconProps = {
@@ -30,6 +30,11 @@ const contactInfo = [
     Icon: Linkedin,
     href: `https://${portfolioData.contact.linkedin}`,
     text: portfolioData.contact.linkedin,
+  },
+  {
+    Icon: Globe,
+    href: "https://seungwon.tech",
+    text: "seungwon.tech",
   },
 ];
 
