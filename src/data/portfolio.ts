@@ -8,14 +8,14 @@ export const portfolioData: PortfolioData = {
     `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
   사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
 
-  🧠 Spring Webflux(Project Reactor), React 경험으로 문제를 
-  Fuctional하게 분석하고 순수(Pure)하게 처리할 수 있습니다.
+  🧠 Spring Webflux(Project Reactor) FRP 경험으로 문제를 
+  Functional하게 분석하고 순수(Pure)하게 처리할 수 있습니다.
 
   👥 현재 IC로 일하고 있지만, 
   백엔드 개발 팀을 리딩하며 코드 품질을 관리한 경험이 있습니다.
 
   🚀 마이스터고 졸업예정자로서 2026년 졸업 후
-  산업기능요원 현역 신규 편입을 통해 적극적으로 기여할 수 있습니다.`,
+  산업기능요원 현역 신규 편입을 통해 적극적으로 기여하고자 합니다.`,
 
   contact: {
     email: "contact@seungwon.me",
