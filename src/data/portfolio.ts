@@ -232,6 +232,18 @@ export const portfolioData: PortfolioData = {
       repoUrl: "https://github.com/redis/lettuce",
       prs: [
         {
+          title: "#3266",
+          date: "2025.08.08",
+          description: "유틸리티 클래스의 생성자를 private으로 변경하여 인스턴스화를 방지하고 Java 모범 사례를 적용",
+          url: "https://github.com/redis/lettuce/pull/3266"
+        },
+        {
+          title: "#3264",
+          date: "2025.05.28",
+          description: "Enum을 사용해 정규식 패턴을 그룹화하여 코드 구성과 안정성을 개선",
+          url: "https://github.com/redis/lettuce/pull/3264"
+        },
+        {
           title: "#3262",
           date: "2025.04.23",
           description: "불필요한 컬렉션 생성을 제거하여 메모리 할당 없이 성능 향상",
