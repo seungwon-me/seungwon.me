@@ -18,7 +18,7 @@ export const portfolioData: PortfolioData = {
   산업기능요원 현역 신규 편입을 통해 적극적으로 기여하고자 합니다.`,
 
   contact: {
-    email: "contact@seungwon.me",
+    email: "hello@seungwon.me",
     phone: "+82-10-2977-8517",
     github: "github.com/ori0o0p",
     linkedin: "linkedin.com/in/ori0o0p"
