@@ -42,6 +42,9 @@ export default function Home() {
 
       {/* Certifications Section */}
       <CertificationsSection />
+        <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
+            <p>No Silver Bullet in Software Engineering.</p>
+        </footer>
     </main>
   );
 }
