@@ -234,7 +234,7 @@ export const portfolioData: PortfolioData = {
         {
           title: "#3266",
           date: "2025.08.08",
-          description: "유틸리티 클래스의 생성자를 private으로 변경하여 인스턴스화 방지",
+          description: "인스턴스화로 인한 메모리 낭비를 방지하고, 코드 안정성 향상",
           url: "https://github.com/redis/lettuce/pull/3266"
         },
         {
