@@ -9,7 +9,7 @@ export function CareerSection() {
       <div>
         {portfolioData.careers?.map((career, index) => (
           <div key={index} className="relative py-3 group">
-            <div className="bg-[var(--bg-secondary)] p-6 rounded-[12px] border border-[var(--border)] flex flex-col md:flex-row md:items-start md:justify-between gap-4 transition-transform duration-300">
+            <div className="bg-[var(--bg-secondary)] p-6 rounded-[12px] border border-[var(--border)] flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-3 mb-1">
                   {career.companyLogoUrl && (

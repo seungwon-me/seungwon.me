@@ -18,7 +18,7 @@ export function OpenSourceSection() {
                 </a>
               )}
               {repo.repoUrl ? (
-                <a href={repo.repoUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-bold !text-[var(--text-secondary)] hover:!text-[var(--text-primary)] transition-colors duration-300">
+                <a href={repo.repoUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-bold !text-[var(--text-secondary)]">
                   {repo.repoName}
                 </a>
               ) : (
@@ -27,19 +27,19 @@ export function OpenSourceSection() {
             </div>
             <div className="space-y-3">
               {repo.prs.map((pr, prIdx) => (
-                <div key={prIdx} className="bg-[var(--bg-secondary)] p-6 rounded-[12px] border border-[var(--border)] flex flex-col md:flex-row md:items-start md:justify-between gap-4 transition-transform duration-300">
+                <div key={prIdx} className="bg-[var(--bg-secondary)] p-6 rounded-[12px] border border-[var(--border)] flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex flex-col gap-1 w-full">
                     <div className="flex flex-wrap items-center gap-2 w-full">
-                      <h3 className="text-base md:text-lg font-semibold text-[var(--text-primary)] break-keep group-hover:text-[var(--primary-blue)] transition-colors duration-300">
+                      <h3 className="text-base md:text-lg font-semibold text-[var(--text-primary)] break-keep">
                       <a 
-  href={pr.url} 
-  target="_blank" 
-  rel="noopener noreferrer" 
->
-  <span className="text-lg font-bold !text-[var(--text-secondary)] hover:!text-[var(--text-primary)] transition-colors duration-300">{pr.title}</span>
-</a>
+                        href={pr.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                      >
+                        <span className="text-lg font-bold !text-[var(--text-secondary)]">{pr.title}</span>
+                      </a>
                       </h3>
-                      <span className="text-sm text-[var(--text-secondary)] break-keep group-hover:text-[var(--text-primary)] transition-colors duration-300">
+                      <span className="text-sm text-[var(--text-secondary)] break-keep">
                         {pr.description}
                       </span>
                     </div>
@@ -55,4 +55,4 @@ export function OpenSourceSection() {
       </div>
     </Section>
   );
-} 
+}

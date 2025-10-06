@@ -71,7 +71,7 @@ function StaticProjectCard({ project }: { project: Project }) {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-base text-[var(--text-primary)] hover:text-[var(--primary-blue)] transition-colors font-medium"
+                      className="flex items-center gap-3 text-base text-[var(--text-primary)] font-medium"
                     >
                       {link.label.toLowerCase().includes("github") || link.label.toLowerCase().includes("code") ? (
                         <Github size={18} />

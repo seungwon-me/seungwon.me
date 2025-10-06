@@ -51,7 +51,6 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Menlo', monospace, 'Inter', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
 html {
@@ -60,14 +59,12 @@ html {
 
 a {
   color: var(--primary-blue);
-  transition: color 0.2s ease;
 }
 a:hover {
   color: var(--primary-dark);
 }
 
 button {
-  transition: all 0.2s ease;
 }
 
 /* Chrome, Safari, Edge Chromium */
