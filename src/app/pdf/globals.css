@@ -82,3 +82,42 @@ html:not(.pdf-route-html) {
 body:not(.pdf-route) {
   -ms-overflow-style: none;
 }
+
+@media print {
+  html, body {
+    width: 100%;
+    height: auto;
+    background: white !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
