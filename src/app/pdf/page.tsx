@@ -28,11 +28,12 @@ export default function Home() {
       {/* Projects Section */}
       <ProjectsSection />
 
-      {/* Tech Stack Section */}
-      <TechStackSection />
-
-      {/* Open Source Section */}
-      <OpenSourceSection />
+      {/* Tech Stack & Open Source Section */}
+      <div className="break-before pt-12">
+        <TechStackSection />
+        <div className="my-12" />
+        <OpenSourceSection />
+      </div>
 
       {/* Awards & Activities Section */}
       <AwardsSection />

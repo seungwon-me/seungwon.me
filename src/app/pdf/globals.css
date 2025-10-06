@@ -120,4 +120,12 @@ body:not(.pdf-route) {
   ::-webkit-scrollbar {
     display: none;
   }
+
+  .break-before {
+    page-break-before: always;
+  }
+
+  .break-after {
+    page-break-after: always;
+  }
 }

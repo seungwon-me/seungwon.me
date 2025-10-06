@@ -95,9 +95,11 @@ export function ProjectsSection() {
   return (
     <section>
       <h2 className="text-4xl font-bold tracking-tight mb-10">Projects</h2>
-      <div className="space-y-12">
-        {portfolioData.projects.map((project) => (
-          <StaticProjectCard key={project.id} project={project} />
+      <div>
+        {portfolioData.projects.map((project, index) => (
+          <div key={project.id} className={index === 0 ? "" : "break-before pt-12"}>
+            <StaticProjectCard project={project} />
+          </div>
         ))}
       </div>
     </section>
