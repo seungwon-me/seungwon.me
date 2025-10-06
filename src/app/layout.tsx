@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { geistSans, geistMono } from "./fonts";
 import "./globals.css";
-import ThemeToggle from "@/app/theme-toggle";
 import ScrollStatusIndicator from "@/app/scroll-status-indicator";
+import { Header } from "./Header";
 
 
 
@@ -21,17 +21,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]`}
       >
-        <div className="w-full flex justify-end items-center py-4 px-6 space-x-6">
-          <a
-            href="https://seungwon.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--text-secondary)] hover:text-[var(--primary-blue)] transition-colors"
-          >
-            Blog
-          </a>
-          <ThemeToggle />
-        </div>
+        <Header />
         {/* Custom Scroll Bar */}
         <div className="fixed right-0 top-0 h-full flex flex-col items-end z-50 pointer-events-none">
           <div className="relative h-[40vh] mt-[24vh] flex flex-col items-center justify-center">
