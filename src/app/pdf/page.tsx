@@ -32,17 +32,17 @@ export default function Home() {
       <div className="break-before pt-12">
         <TechStackSection />
         <div className="my-12" />
-        <OpenSourceSection />
+          {/* Certifications Section */}
+          <CertificationsSection />
       </div>
+        <OpenSourceSection />
+
+        {/* Education Section */}
+        <EducationSection />
 
       {/* Awards & Activities Section */}
       <AwardsSection />
 
-      {/* Education Section */}
-      <EducationSection />
-
-      {/* Certifications Section */}
-      <CertificationsSection />
         <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
             <p>No Silver Bullet in Software Engineering.</p>
         </footer>

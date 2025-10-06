@@ -6,7 +6,7 @@ import { Section } from "./Section";
 export function TechStackSection() {
   return (
     <Section title="Tech Stack">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6">
         {portfolioData.techStack.map((category) => (
           <div
             key={category.category}
@@ -30,4 +30,4 @@ export function TechStackSection() {
       </div>
     </Section>
   );
-} 
+}
