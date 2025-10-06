@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 const useThrottledScroll = (callback: () => void, delay: number) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -102,6 +103,7 @@ const getShapeElement = (sides: number, size: number, isActive: boolean, reduced
 };
 
 export default function ScrollStatusIndicator() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -426,7 +428,7 @@ export default function ScrollStatusIndicator() {
     scheduleHide();
   };
   
-  if (!isMounted) return null;
+  if (!isMounted || pathname.startsWith("/pdf")) return null;
   
   const indicatorSize = indicatorSizeRef.current;
   const trackWidth = 3;
