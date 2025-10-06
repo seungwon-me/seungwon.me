@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { geistSans, geistMono } from "./fonts";
 import "./globals.css";
 import ThemeToggle from "@/app/theme-toggle";
 import ScrollStatusIndicator from "@/app/scroll-status-indicator";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "김승원 포트폴리오",
