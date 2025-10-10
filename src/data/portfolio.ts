@@ -19,7 +19,6 @@ export const portfolioData: PortfolioData = {
 
   contact: {
     email: "hello@seungwon.me",
-    phone: "+82-10-2977-8517",
     github: "github.com/ori0o0p",
     linkedin: "linkedin.com/in/ori0o0p"
   },

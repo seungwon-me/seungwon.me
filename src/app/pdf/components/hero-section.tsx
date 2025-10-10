@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Phone, Github, Linkedin, Globe } from 'lucide-react';
+import { Mail, Github, Linkedin, Globe } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 const iconProps = {
@@ -13,11 +13,6 @@ const contactInfo = [
     Icon: Mail,
     href: `mailto:${portfolioData.contact.email}`,
     text: portfolioData.contact.email,
-  },
-  {
-    Icon: Phone,
-    href: `tel:${portfolioData.contact.phone}`,
-    text: portfolioData.contact.phone,
   },
   {
     Icon: Github,
