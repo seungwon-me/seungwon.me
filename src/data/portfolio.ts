@@ -41,7 +41,7 @@ export const portfolioData: PortfolioData = {
         "전공 관리, 조회 API 개발",
         "도서관 조회 API 개발"
       ],
-      retrospective: `사용자(전교생)를 대상으로 직접 운영을 해보면서 ‘그저 기능 구현-배포은 전체 개발의 30% 밖에 안되었구나’를 깨달았습니다. 
+      retrospective: `사용자(전교생)를 대상으로 직접 운영을 해보면서 ‘그저 기능 구현-배포는 전체 개발의 30% 밖에 안되었구나’를 깨달았습니다. 
       
       처음에는 백엔드 리드 개발자로서 아키텍처 개선(RP), 성능 최적화(Java VT), 도메인 설계(DDD) 등에 집중했는데, 프로젝트가 진행될수록 단순히 많은 사람들이 "좋은 코드"라 칭하는 것을 작성하는 것만으로는 부족하다는 것을 절실히 깨달았습니다.
       
@@ -77,7 +77,7 @@ export const portfolioData: PortfolioData = {
         "유저 메일 인증 관리 API 개발"
       ],
       retrospective: `처음엔 Spring MVC의 스레드 풀 방식이 납득되지 않아 WebFlux를 도입했지만, 
-      오히려 복잡한 구조로 인해 오히려 생산성이 떨어지는 문제를 겪었습니다. 
+      복잡한 구조로 인해 오히려 생산성이 떨어지는 문제를 겪었습니다. 
       이 경험을 통해 새로운 기술은 도입 자체보다 트레이드오프, 그리고 실질적 효과가 더 중요하다는 점을 느꼈습니다.
 
       WebFlux의 동작 원리를 깊이 이해하고 싶어 Project Reactor, Netty까지 학습했고, Redis/Lettuce의 Reactive Command 부분의 오픈소스에도 기여했습니다. 
