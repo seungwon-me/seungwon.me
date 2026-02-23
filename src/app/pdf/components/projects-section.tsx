@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
 import type { Project } from "@/types/portfolio";
 import { Github, Link as LinkIcon } from "lucide-react";
@@ -8,9 +9,11 @@ function StaticProjectCard({ project }: { project: Project }) {
   return (
     <div className="bg-[var(--bg-secondary)] rounded-2xl overflow-hidden border border-[var(--border)]">
       <div className="h-80 relative">
-        <img
+        <Image
           src={project.imageUrl}
           alt={project.title}
+          fill
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />

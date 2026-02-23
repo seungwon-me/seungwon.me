@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Mail, Github, Linkedin, Globe } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
@@ -67,9 +68,11 @@ export function HeroSection() {
 
       <div className='relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0'>
         {portfolioData.profileImageUrl ? (
-          <img
+          <Image
             src={portfolioData.profileImageUrl}
             alt='Profile Image'
+            width={160}
+            height={160}
             className='object-cover rounded-full w-full h-full'
           />
         ) : (

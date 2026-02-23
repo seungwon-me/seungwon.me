@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
 import { Section } from "./Section";
 
@@ -13,9 +14,11 @@ export function CareerSection() {
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-3 mb-1">
                   {career.companyLogoUrl && (
-                    <img
+                    <Image
                       src={career.companyLogoUrl}
-                      alt={career.company + ' logo'}
+                      alt={`${career.company} logo`}
+                      width={44}
+                      height={44}
                       className="w-11 h-11 object-contain"
                     />
                   )}
