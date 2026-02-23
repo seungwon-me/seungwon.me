@@ -3,24 +3,38 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
 const useThrottledScroll = (callback: () => void, delay: number) => {
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastRunRef = useRef(Date.now());
-  
+  const callbackRef = useRef(callback);
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+  }, []);
+
   return useCallback(() => {
     const now = Date.now();
     const timeSinceLastRun = now - lastRunRef.current;
-    
+
     if (timeSinceLastRun >= delay) {
-      callback();
+      callbackRef.current();
       lastRunRef.current = now;
     } else {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = setTimeout(() => {
-        callback();
+        callbackRef.current();
         lastRunRef.current = Date.now();
       }, delay - timeSinceLastRun);
     }
-  }, [callback, delay]);
+  }, [delay]);
 };
 
 // 정다각형의 꼭짓점 계산 (외접원 기준)
@@ -119,7 +133,7 @@ export default function ScrollStatusIndicator() {
   const ariaLiveRef = useRef<HTMLDivElement>(null);
   
   // 상태 관리 refs
-  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const sidesRef = useRef(2); // 2로 시작해서 첫 번째 getNextSides(2) 호출 시 3(삼각형)이 됨
   const previousVisibleRef = useRef(false);
   const isDraggingRef = useRef(false);
@@ -468,7 +482,8 @@ export default function ScrollStatusIndicator() {
         onClick={handleTrackClick}
         onKeyDown={handleKeyDown}
         tabIndex={0}
-        role="scrollbar"
+        role="slider"
+        aria-orientation="vertical"
         aria-valuenow={Math.round(currentProgressRef.current * 100)}
         aria-valuemin={0}
         aria-valuemax={100}
