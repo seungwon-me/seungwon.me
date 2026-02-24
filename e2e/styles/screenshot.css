@@ -1,0 +1,7 @@
+* {
+  caret-color: transparent !important;
+}
+
+[role="slider"][aria-label*="스크롤"] {
+  visibility: hidden !important;
+}
