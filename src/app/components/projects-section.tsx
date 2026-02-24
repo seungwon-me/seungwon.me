@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
 import type { Project } from "@/types/portfolio";
 import { Github, Link as LinkIcon, X } from "lucide-react";
@@ -9,31 +10,25 @@ import { Github, Link as LinkIcon, X } from "lucide-react";
 function ProjectCard({ project, onSelect }: { project: Project; onSelect: () => void; }) {
   return (
     <motion.div
-      layoutId={`card-${project.id}`}
       onClick={onSelect}
       className="relative h-60 rounded-[12px] overflow-hidden cursor-pointer group"
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     >
-      <motion.img
+      <Image
         src={project.imageUrl}
         alt={project.title}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="absolute inset-0 w-full h-full object-cover"
-        layoutId={`image-${project.id}`}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
       <div className="absolute bottom-0 left-0 p-6">
-        <motion.h3
-          layoutId={`title-${project.id}`}
-          className="text-2xl font-bold text-white"
-        >
+        <h3 className="text-2xl font-bold text-white">
           {project.title}
-        </motion.h3>
-        <motion.p
-          layoutId={`tagline-${project.id}`}
-          className="text-sm text-gray-300 mt-1"
-        >
+        </h3>
+        <p className="text-sm text-gray-300 mt-1">
           {project.tagline}
-        </motion.p>
+        </p>
       </div>
     </motion.div>
   );
@@ -41,12 +36,14 @@ function ProjectCard({ project, onSelect }: { project: Project; onSelect: () => 
 
 function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDeselect: () => void; }) {
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4" onClick={onDeselect}>
+    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={onDeselect}>
       <motion.div
-        layoutId={`card-${project.id}`}
         className="relative max-w-5xl w-full max-h-[90vh] bg-[var(--bg-secondary)] rounded-2xl overflow-hidden shadow-2xl"
         onClick={(e) => e.stopPropagation()}
-        transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+        initial={{ opacity: 0, scale: 0.98, y: 8 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.98, y: 8 }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
       >
         <motion.button 
           onClick={onDeselect} 
@@ -58,31 +55,24 @@ function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDese
         
         <div className="max-h-[90vh] overflow-y-auto no-scrollbar">
           <div className="h-96 relative">
-            <motion.img
+            <Image
               src={project.imageUrl}
               alt={project.title}
+              fill
+              sizes="100vw"
               className="absolute inset-0 w-full h-full object-cover object-top"
-              layoutId={`image-${project.id}`}
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
              <div className="absolute bottom-0 left-0 p-8">
-              <motion.h3
-                layoutId={`title-${project.id}`}
-                className="text-4xl md:text-5xl font-bold text-white tracking-tighter"
-              >
+              <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
                 {project.title}
-              </motion.h3>
-              <motion.p
-                layoutId={`tagline-${project.id}`}
-                className="text-lg text-gray-200 mt-2"
-              >
+              </h3>
+              <p className="text-lg text-gray-200 mt-2">
                 {project.tagline}
-              </motion.p>
-              <motion.p
-                className="text-base text-gray-300 mt-1 font-mono"
-              >
+              </p>
+              <p className="text-base text-gray-300 mt-1 font-mono">
                 기간: {project.period}
-              </motion.p>
+              </p>
             </div>
           </div>
           
