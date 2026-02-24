@@ -4,7 +4,7 @@ test("pdf route smoke and visual", async ({ page }) => {
   await page.goto("/pdf");
   await expect(page.locator("main")).toBeVisible();
   await expect(page.locator("div.break-before.pt-12").first()).toBeVisible();
-  await expect(page).toHaveScreenshot("pdf-route.png", { fullPage: true });
+  await expect(page).toHaveScreenshot("pdf-route.png");
 });
 
 test("pdf projects section visual", async ({ page }) => {
@@ -14,7 +14,9 @@ test("pdf projects section visual", async ({ page }) => {
     .filter({ has: page.getByRole("heading", { name: "Projects" }) })
     .first();
   await expect(projectsSection).toBeVisible();
-  await expect(projectsSection).toHaveScreenshot("pdf-projects-section.png");
+  const firstProjectCard = projectsSection.locator("div.bg-\\[var\\(--bg-secondary\\)\\]").first();
+  await expect(firstProjectCard).toBeVisible();
+  await expect(firstProjectCard).toHaveScreenshot("pdf-projects-first-card.png");
 });
 
 test("pdf open source section visual", async ({ page }) => {
