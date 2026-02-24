@@ -16,7 +16,9 @@ test("pdf projects section visual", async ({ page }) => {
   await expect(projectsSection).toBeVisible();
   const firstProjectCard = projectsSection.locator("div.bg-\\[var\\(--bg-secondary\\)\\]").first();
   await expect(firstProjectCard).toBeVisible();
-  await expect(firstProjectCard).toHaveScreenshot("pdf-projects-first-card.png");
+  const firstProjectPreview = firstProjectCard.locator("div.h-80.relative").first();
+  await expect(firstProjectPreview).toBeVisible();
+  await expect(firstProjectPreview).toHaveScreenshot("pdf-projects-first-preview.png");
 });
 
 test("pdf open source section visual", async ({ page }) => {
