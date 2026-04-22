@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# seungwon.me
 
-## Getting Started
+김승원의 포트폴리오 웹사이트입니다.
 
-First, run the development server:
+- Live: <https://seungwon.me>
+- Blog: <https://seungwon.tech>
+
+## 소개
+
+이 사이트는 백엔드 개발자 김승원의 프로젝트 경험, 기술 스택, 오픈소스 기여, 수상/활동, 학력/자격 정보를 한 곳에서 보여주기 위한 포트폴리오입니다.
+
+## Tech Stack
+
+- Framework: Next.js 15 (App Router)
+- Language: TypeScript
+- UI: React 19, Tailwind CSS 4, Framer Motion
+- Testing: Playwright (Visual Regression)
+- Deploy: Netlify
+
+## 로컬 실행
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 <http://localhost:3000> 접속
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 주요 스크립트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev            # 개발 서버
+npm run build          # 프로덕션 빌드
+npm run start          # 프로덕션 서버 실행
+npm run lint           # ESLint
+npm run test:visual    # 시각 회귀 테스트
+```
 
-## Learn More
+## 프로젝트 구조
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/
+  app/
+    components/        # 화면 컴포넌트
+    pdf/               # PDF 전용 페이지
+    layout.tsx         # 글로벌 레이아웃 + 메타데이터
+    page.tsx           # 메인 페이지
+  data/
+    portfolio.ts       # 포트폴리오 원본 데이터
+  types/
+    portfolio.ts       # 타입 정의
+e2e/                   # Playwright 테스트
+public/                # 정적 파일
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+다음 항목을 구성했습니다.
 
-## Deploy on Vercel
+- Open Graph / Twitter 카드 메타데이터
+- canonical URL
+- robots.txt (동적 생성)
+- sitemap.xml (동적 생성)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 라이선스
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+개인 포트폴리오 용도 프로젝트입니다.

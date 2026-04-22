@@ -4,11 +4,48 @@ import "./globals.css";
 import ScrollStatusIndicator from "@/app/scroll-status-indicator";
 import { Header } from "./Header";
 
-
+const siteUrl = "https://seungwon.me";
+const siteTitle = "김승원 | Backend Developer";
+const siteDescription =
+  "사용자 경험의 본질을 찾는 백엔드 개발자 김승원의 포트폴리오";
 
 export const metadata: Metadata = {
-  title: "김승원 포트폴리오",
-  description: "포트폴리오",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  keywords: [
+    "김승원",
+    "백엔드 개발자",
+    "Backend Developer",
+    "Spring",
+    "WebFlux",
+    "Portfolio",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "김승원 포트폴리오",
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: "/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "김승원 포트폴리오 프로필 이미지",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/profile.png"],
+  },
 };
 
 export default function RootLayout({
