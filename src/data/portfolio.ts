@@ -304,7 +304,7 @@ export const portfolioData: PortfolioData = {
         {
           title: "사용자 약관 동의/안내 메일 체계",
           items: [
-            "약관/마케팅 수신 동의 저장은 dual-write와 fallback 제거를 단계적으로 적용하고, revert/reapply 가능한 작은 단위로 배포",
+            "약관/마케팅 수신 동의 저장은 dual-write와 fallback 제거를 단계적으로 적용",
             "AWS SES SDK 전환과 AssumeRole 기반 발신 분리는 smoke/probe 테스트로 검증한 뒤 테스트용 경로를 제거하며 안정화"
           ]
         },
