@@ -155,7 +155,7 @@ export function ProjectsSection() {
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-4xl font-bold tracking-tight mb-10">Projects</h2>
+      <h2 className="text-4xl font-bold tracking-tight mb-10">Side Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {portfolioData.projects.map((project) => (
           <ProjectCard key={project.id} project={project} onSelect={() => setSelectedId(project.id)} />

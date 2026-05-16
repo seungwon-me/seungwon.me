@@ -76,7 +76,15 @@ export interface Career {
   position: string;
   period: string;
   description?: string;
+  principles?: string[];
   companyLogoUrl?: string;
+  highlights?: CareerHighlight[];
+}
+
+export interface CareerHighlight {
+  title: string;
+  summary?: string;
+  items?: string[];
 }
 
 export type PortfolioData = {

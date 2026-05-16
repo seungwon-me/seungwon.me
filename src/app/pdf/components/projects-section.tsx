@@ -97,7 +97,7 @@ function StaticProjectCard({ project }: { project: Project }) {
 export function ProjectsSection() {
   return (
     <section>
-      <h2 className="text-4xl font-bold tracking-tight mb-10">Projects</h2>
+      <h2 className="text-4xl font-bold tracking-tight mb-10">Side Projects</h2>
       <div>
         {portfolioData.projects.map((project, index) => (
           <div key={project.id} className={index === 0 ? "" : "break-before pt-12"}>

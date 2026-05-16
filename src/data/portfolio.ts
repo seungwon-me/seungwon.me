@@ -2,19 +2,19 @@ import { PortfolioData } from '@/types/portfolio';
 
 export const portfolioData: PortfolioData = {
   name: "김승원",
-  title: "Backend Developer",
+  title: "Backend Engineer",
   subtitle: "안녕하세요! 백엔드 개발에서 사용자 경험의 본질을 찾는 개발자 김승원입니다.",
   about:
     `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
   사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
 
   🧠 Spring Webflux(Project Reactor) FRP 경험으로 문제를 
-  Functional하게 분석하고 순수(Pure)하게 처리할 수 있습니다.
+  Functional하게 분석하고 Pure하게 처리할 수 있습니다.
 
   👥 현재 IC로 일하고 있지만, 
   백엔드 개발 팀을 리딩하며 코드 품질을 관리한 경험이 있습니다.
 
-  🚀 마이스터고 졸업예정자로서 2026년 졸업 후
+  🚀 마이스터고 졸업자로서
   산업기능요원 현역 신규 편입을 통해 적극적으로 기여하고자 합니다.`,
 
   contact: {
@@ -283,20 +283,60 @@ export const portfolioData: PortfolioData = {
       ]
     }
   ],
-  // careers: [
-  //   {
-  //     company: "주식회사 예시컴퍼니",
-  //     position: "백엔드 개발자",
-  //     period: "2022.03 ~ 2023.12",
-  //     description: "Spring Boot 기반의 REST API 개발 및 유지보수, 대용량 트래픽 처리 경험.",
-  //     companyLogoUrl: "/vercel.svg"
-  //   },
-  //   {
-  //     company: "스타트업 샘플",
-  //     position: "풀스택 엔지니어",
-  //     period: "2021.01 ~ 2022.02",
-  //     description: "React와 Node.js를 활용한 서비스 기획 및 개발, AWS 인프라 관리.",
-  //     companyLogoUrl: "/next.svg"
-  //   }
-  // ],
+  careers: [
+    {
+      company: "ktown4u",
+      position: "Backend Engineer",
+      period: "2025.08 ~ 현재",
+      principles: [
+        "영향 범위가 큰 변경은 기존 경로를 즉시 제거하기보다 신규 경로를 병행 적용하고, feature flag, 비교 로그, 회귀 테스트로 동작 차이를 확인한 뒤 전환했습니다.",
+        "환율 조회, 사용자 인증처럼 운영 리스크가 큰 작업은 Strangler Fig/Parallel Run 방식으로 기존 시스템을 감싸며 단계적으로 대체하는 것을 지향합니다."
+      ],
+      companyLogoUrl: "/ktown4u_logo.png",
+      highlights: [
+        {
+          title: "개인정보보호/ISMS 대응",
+          items: [
+            "회원 탈퇴 이벤트, 개인정보 S3 아카이빙/익명화, 활성회원 법적 보존기간 삭제 배치와 종료 이벤트 참여 이력 익명화 구현",
+            "대량 개인정보 변경은 chunk/limit 기반 backfill, 일별 처리, 커서 전진 검증, 누락 컬럼 보정으로 재실행 가능한 흐름으로 구성"
+          ]
+        },
+        {
+          title: "사용자 약관 동의/안내 메일 체계",
+          items: [
+            "약관/마케팅 수신 동의 저장은 dual-write와 fallback 제거를 단계적으로 적용하고, revert/reapply 가능한 작은 단위로 배포",
+            "AWS SES SDK 전환과 AssumeRole 기반 발신 분리는 smoke/probe 테스트로 검증한 뒤 테스트용 경로를 제거하며 안정화"
+          ]
+        },
+        {
+          title: "주문·결제·쿠폰",
+          items: [
+            "주문서와 주문 생성 금액 불일치를 재현 테스트로 고정하고, 쿠폰 환율/관세 계산 기준을 통일",
+            "강제 전달 쿠폰에 사용자/상품/카테고리/최소금액 재검증을 추가하고, PayPal 로그와 운영 추적성을 함께 개선"
+          ]
+        },
+        {
+          title: "배송·상품 운영 기능",
+          items: [
+            "배송대기 관리 GraphQL API와 백오피스 조회/등록 화면을 인수 테스트와 함께 개발하고, 엑셀 업로드/기간 변경/즉시 종료 지원",
+            "껍데기 상품 기준 배송대기 조건과 상품/아이템 dimension dual-write처럼 운영 데이터 정합성이 깨지기 쉬운 지점을 보완"
+          ]
+        },
+        {
+          title: "B2B/백오피스 개선",
+          items: [
+            "B2B 한국/글로벌 상점 분리는 로그인 요청, 토큰 기반 shopNo, 상점별 데이터 조회와 UI 분기를 단계적으로 적용",
+            "B2B 스케줄 캘린더, 공지 에디터, 상품 조회 선택/비고 UI, 배너 수정 기능 등 운영 화면 사용성 개선"
+          ]
+        },
+        {
+          title: "플랫폼 운영 기반",
+          items: [
+            "피처 플래그 전환은 profile별 구현체, local stub, timeout, prefix 정책을 먼저 정리한 뒤 기존 코드와 IaC를 제거",
+            "Okta cutover, Kafka retry topic 축소, 스케줄러 이벤트 위임, K8s 라우팅, DMS/Databricks/CI 매핑 변경을 점진 적용"
+          ]
+        }
+      ]
+    }
+  ],
 }; 
