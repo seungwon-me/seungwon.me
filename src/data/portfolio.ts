@@ -332,7 +332,7 @@ export const portfolioData: PortfolioData = {
         {
           title: "플랫폼 운영 기반",
           items: [
-            "피처 플래그 전환은 profile별 구현체, local stub, timeout, prefix 정책을 먼저 정리한 뒤 기존 코드와 IaC를 제거",
+            "Unleash 적용 과정에서 profile별 구현체, local stub, timeout, prefix 정책을 정리하고 기존 AppConfig 코드와 IaC를 제거",
             "Okta cutover, Kafka retry topic 축소, 스케줄러 이벤트 위임, K8s 라우팅, DMS/Databricks/CI 매핑 변경을 점진 적용"
           ]
         }
