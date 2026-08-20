@@ -91,7 +91,6 @@ export type PortfolioData = {
   name: string;
   title: string;
   subtitle: string;
-  about: string;
   contact: ContactInfo;
   profileImageUrl?: string;
   projects: Project[];
