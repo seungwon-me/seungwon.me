@@ -20,6 +20,8 @@ const eslintConfig = [
       "next-env.d.ts",
       "playwright.config.ts",
       "e2e/**",
+      "playwright-report/**",
+      "test-results/**",
     ],
   },
 ];

@@ -1,21 +1,30 @@
 import { expect, test } from "@playwright/test";
 
 test("pdf route smoke and visual", async ({ page }) => {
+  const pageErrors: string[] = [];
+  page.on("pageerror", (error) => pageErrors.push(error.message));
   await page.goto("/pdf");
   await expect(page.locator("main")).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
   await expect(page.locator("main section > h2")).toHaveText([
     "Career",
-    "Side Projects",
     "Tech Stack",
-    "Certifications",
     "Open Source Contributions",
-    "Education",
     "Awards & Activities",
+    "Education",
+    "Certifications",
+    "Side Projects",
   ]);
-  const techPage = page.locator("main > div.break-before.pt-12").filter({
-    has: page.getByRole("heading", { name: "Tech Stack", exact: true }),
+  const careerSection = page.locator("main section").filter({
+    has: page.getByRole("heading", { name: "Career", exact: true }),
   });
+  await expect(careerSection).toContainText("2025.11 ~ 현재");
+  await expect(careerSection).toContainText("2025.08 ~ 2025.11");
+  await expect(careerSection).toContainText("S3에 동기 업로드한 뒤에만 개인정보를 익명화");
+
+  const techPage = page.getByTestId("pdf-tech-page");
   await expect(techPage).toBeVisible();
+  expect(pageErrors).toEqual([]);
   await expect(page).toHaveScreenshot("pdf-route.png");
 });
 

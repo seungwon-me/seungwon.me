@@ -16,24 +16,26 @@ export default function Home() {
       {/* Career Section */}
       <CareerSection />
 
-      {/* Projects Section */}
-      <ProjectsSection />
-
       {/* Tech Stack & Open Source Section */}
-      <div className="break-before pt-12">
+      <div className="break-before pt-12" data-testid="pdf-tech-page">
         <TechStackSection />
         <div className="my-12" />
-        {/* Certifications Section */}
-        <CertificationsSection />
+        <OpenSourceSection />
       </div>
 
-      <OpenSourceSection />
+      {/* Awards & Activities Section */}
+      <AwardsSection />
 
       {/* Education Section */}
       <EducationSection />
 
-      {/* Awards & Activities Section */}
-      <AwardsSection />
+      {/* Certifications Section */}
+      <CertificationsSection />
+
+      {/* Projects Appendix */}
+      <div className="break-before pt-12 print:hidden" data-testid="pdf-projects-appendix">
+        <ProjectsSection />
+      </div>
 
       <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
         <p>No Silver Bullet in Software Engineering.</p>
