@@ -20,8 +20,7 @@ test("home route smoke and visual", async ({ page }) => {
   const careerSection = page.locator("main > section").filter({
     has: page.getByRole("heading", { name: "Career", exact: true }),
   });
-  await expect(careerSection).toContainText("2025.11 ~ 현재");
-  await expect(careerSection).toContainText("2025.08 ~ 2025.11");
+  await expect(careerSection).toContainText("2025.08 ~ 현재");
   await expect(careerSection).toContainText("바우처 원장 신규 개발과 기존 예치금 결제 연계");
   await expect(careerSection).toContainText("S3에 동기 업로드한 뒤에만 개인정보를 익명화");
   await expect(careerSection).not.toContainText("broker 인계");

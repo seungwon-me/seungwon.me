@@ -226,8 +226,8 @@ export const portfolioData: PortfolioData = {
     {
       company: "ktown4u",
       position: "Backend Engineer",
-      period: "2025.11 ~ 현재",
-      description: "커머스 주문·결제, 회원, 바우처와 개인정보 라이프사이클 관련 기능을 개발했습니다. 스키마와 SQL부터 API, 이벤트 처리, 배치, 운영 화면까지 맡았습니다.",
+      period: "2025.08 ~ 현재",
+      description: "2025년 8월 Java/Spring 백엔드 개발자로 합류해 설정 이관과 환율 데이터 전환 기반을 마련했고, 이후 커머스 주문·결제, 회원, 바우처와 개인정보 라이프사이클 관련 기능을 개발했습니다. 스키마와 SQL부터 API, 이벤트 처리, 배치, 운영 화면까지 맡았습니다.",
       principles: [
         "개발 전 바뀌지 말아야 할 규칙과 운영 중 달라질 정책을 나눕니다. 규칙은 트랜잭션·원장·행 잠금으로 보호하고, 정책은 별도 객체와 설정으로 분리합니다.",
         "동시 실행·중간 실패·재시도·소급 처리 뒤 실제 MySQL에 남은 결과를 확인합니다."
@@ -269,23 +269,10 @@ export const portfolioData: PortfolioData = {
         {
           title: "세트 상품 주문 금액 정합성",
           summary: "주문서와 주문 생성에서 달랐던 환산·반올림 순서를 맞추고, 두 경로의 세트 상품 가격이 일치하는 회귀 테스트를 추가했습니다."
-        }
-      ]
-    },
-    {
-      company: "ktown4u",
-      position: "Backend Engineer Intern",
-      period: "2025.08 ~ 2025.11",
-      description: "Java/Spring 백엔드 기능 개발과 운영 경로 이관을 담당했습니다.",
-      companyLogoUrl: "/ktown4u_logo.png",
-      highlights: [
-        {
-          title: "Feature Flag 경로 이관",
-          summary: "한 백엔드 서비스의 Feature Flag 경로를 AWS AppConfig에서 Unleash로 옮겼습니다. 실행 프로파일과 타임아웃 설정을 정리하고 기존 설정 코드와 IaC를 제거했습니다."
         },
         {
-          title: "환율 이력 적재와 비교 기반",
-          summary: "신규 환율 이력 적재 경로를 추가하고, 기존 API 결과와의 차이를 로그로 남겼습니다."
+          title: "설정·환율 데이터 전환 기반",
+          summary: "한 백엔드 서비스의 Feature Flag 경로를 AWS AppConfig에서 Unleash로 옮기고, 실행 프로파일과 타임아웃 설정을 정리했습니다. 신규 환율 이력 적재 경로와 기존 API 결과 비교 로그를 추가해 단계적으로 전환할 수 있는 기반을 마련했습니다."
         },
         {
           title: "사용자 기기·알림 설정 API",
