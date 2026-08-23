@@ -10,13 +10,15 @@
 
 ## Tech Stack
 
-- Framework: Next.js 15 (App Router)
+- Framework: Next.js 16 (App Router)
 - Language: TypeScript
 - UI: React 19, Tailwind CSS 4, Framer Motion
 - Testing: Playwright (Visual Regression)
 - Deploy: Netlify
 
 ## 로컬 실행
+
+Node.js 24를 사용합니다.
 
 ```bash
 npm ci
