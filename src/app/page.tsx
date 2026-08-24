@@ -1,14 +1,11 @@
-"use client";
-import { portfolioData } from "@/data/portfolio";
 import { HeroSection } from "./components/hero-section";
-import { ProjectsSection } from "./components/projects-section";
-import { Section } from "./components/Section";
-import { TechStackSection } from "./components/tech-stack-section";
-import { EducationSection } from "./components/education-section";
+import { CareerSection } from "./components/career-section";
 import { AwardsSection } from "./components/awards-section";
 import { CertificationsSection } from "./components/certifications-section";
+import { EducationSection } from "./components/education-section";
 import { OpenSourceSection } from "./components/open-source-section";
-import { CareerSection } from "./components/career-section";
+import { ProjectsSection } from "./components/projects-section";
+import { TechStackSection } from "./components/tech-stack-section";
 
 export default function Home() {
   return (
@@ -16,24 +13,17 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Section */}
-      <Section title="About">
-        <p className="text-base md:text-lg text-[var(--text-secondary)] whitespace-pre-line max-w-3xl">
-          {portfolioData.about}
-        </p>
-      </Section>
-
       {/* Career Section */}
       <CareerSection />
-
-      {/* Projects Section */}
-      <ProjectsSection />
 
       {/* Tech Stack Section */}
       <TechStackSection />
 
       {/* Open Source Section */}
       <OpenSourceSection />
+
+      {/* Projects Section */}
+      <ProjectsSection />
 
       {/* Awards & Activities Section */}
       <AwardsSection />
@@ -43,9 +33,10 @@ export default function Home() {
 
       {/* Certifications Section */}
       <CertificationsSection />
-        <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
-            <p>No Silver Bullet in Software Engineering.</p>
-        </footer>
+
+      <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
+        <p>No Silver Bullet in Software Engineering.</p>
+      </footer>
     </main>
   );
 }

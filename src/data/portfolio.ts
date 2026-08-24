@@ -3,20 +3,9 @@ import { PortfolioData } from '@/types/portfolio';
 export const portfolioData: PortfolioData = {
   name: "김승원",
   title: "Backend Engineer",
-  subtitle: "안녕하세요! 백엔드 개발에서 사용자 경험의 본질을 찾는 개발자 김승원입니다.",
-  about:
-    `🎯 백엔드 개발자로서 가장 중요하게 생각하는 가치는 \`사용자 경험\`입니다.
-  사용자의 목표를 달성하기 위해 안정적이고 정확하며 빠르게 서비스를 제공하는 것이 백엔드 개발의 본질이라 생각합니다.
+  subtitle: `실패 이후에도 데이터가 맞는 애플리케이션을 만듭니다.
 
-  🧠 Spring Webflux(Project Reactor) FRP 경험으로 문제를 
-  Functional하게 분석하고 Pure하게 처리할 수 있습니다.
-
-  👥 현재 IC로 일하고 있지만, 
-  백엔드 개발 팀을 리딩하며 코드 품질을 관리한 경험이 있습니다.
-
-  🚀 마이스터고 졸업자로서
-  산업기능요원 현역 신규 편입을 통해 적극적으로 기여하고자 합니다.`,
-
+결제와 개인정보 처리와 같이 실패 비용이 큰 도메인에서 동시 실행·중간 실패·재시도·소급 처리 이후에도 지켜야 할 불변식을 검증해왔습니다.`,
   contact: {
     email: "hello@seungwon.me",
     github: "github.com/ori0o0p",
@@ -41,15 +30,15 @@ export const portfolioData: PortfolioData = {
         "전공 관리, 조회 API 개발",
         "도서관 조회 API 개발"
       ],
-      retrospective: `사용자(전교생)를 대상으로 직접 운영을 해보면서 ‘그저 기능 구현-배포는 전체 개발의 30% 밖에 안되었구나’를 깨달았습니다. 
-      
+      retrospective: `사용자(전교생)를 대상으로 직접 운영을 해보면서 ‘그저 기능 구현-배포는 전체 개발의 30% 밖에 안되었구나’를 깨달았습니다.
+
       처음에는 백엔드 리드 개발자로서 아키텍처 개선(RP), 성능 최적화(Java VT), 도메인 설계(DDD) 등에 집중했는데, 프로젝트가 진행될수록 단순히 많은 사람들이 "좋은 코드"라 칭하는 것을 작성하는 것만으로는 부족하다는 것을 절실히 깨달았습니다.
-      
+
       실제로 운영을 하며 매번 변경, 추가되는 요구사항에 대한 즉각적인 개발을 해야했고, 사용자가 실제로 겪는 문제를 해결하는 것이 진짜 개발의 핵심이라는 것을 배웠습니다.
-      
+
       레포 프로젝트를 통해 단순한 기능 개발자가 아닌, 사용자의 문제를 해결하는 개발자로 성장하는 방법을 배웠습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Redis", "JWT"],
-      
+
       imageUrl: "/repo-project-image.png",
       isActive: false,
       links: [
@@ -65,7 +54,7 @@ export const portfolioData: PortfolioData = {
       tagline: "지식의 연결과 공유, 대마고 학생들을 위한 대마위키",
       period: "2024.06 ~ 2025.02",
       description: `대마위키는 대덕소프트웨어마이스터고등학교 학생들을 위한 정보 공유 플랫폼입니다.
-                    Spring WebFlux 기반의 리액티브 웹 애플리케이션으로 구축되어, 
+                    Spring WebFlux 기반의 리액티브 웹 애플리케이션으로 구축되어,
                     높은 성능과 효율적인 리소스 관리를 목표로 설계되었습니다.
                     현재는 운영 준비 중이며, 개발 완료 후 내부 테스트를 거쳐 서비스될 예정입니다.`,
       contributions: [
@@ -76,16 +65,16 @@ export const portfolioData: PortfolioData = {
         "유저 인가 인증 API 개발",
         "유저 메일 인증 관리 API 개발"
       ],
-      retrospective: `처음엔 Spring MVC의 스레드 풀 방식이 납득되지 않아 WebFlux를 도입했지만, 
-      복잡한 구조로 인해 오히려 생산성이 떨어지는 문제를 겪었습니다. 
+      retrospective: `처음엔 Spring MVC의 스레드 풀 방식이 납득되지 않아 WebFlux를 도입했지만,
+      복잡한 구조로 인해 오히려 생산성이 떨어지는 문제를 겪었습니다.
       이 경험을 통해 새로운 기술은 도입 자체보다 트레이드오프, 그리고 실질적 효과가 더 중요하다는 점을 느꼈습니다.
 
-      WebFlux의 동작 원리를 깊이 이해하고 싶어 Project Reactor, Netty까지 학습했고, Redis/Lettuce의 Reactive Command 부분의 오픈소스에도 기여했습니다. 
+      WebFlux의 동작 원리를 깊이 이해하고 싶어 Project Reactor, Netty까지 학습했고, Redis/Lettuce의 Reactive Command 부분의 오픈소스에도 기여했습니다.
       기술적으로는 큰 성장의 계기였지만, 무조건적인 비동기 구조가 성능 개선으로 이어지지 않는다는 현실적 인사이트도 얻었습니다.
 
       단순히 새로운 걸 해보는 것을 넘어, 어떤 기술이 서비스에 어떻게 기여할 수 있을지 고민하는 태도가 개발자로서 더 중요하다는 걸 배운 프로젝트였습니다.`,
       technologies: ["Java", "Spring WebFlux", "Spring Security", "Spring RSocket", "MongoDB", "Redis", "AWS S3", "Paseto"],
-      
+
       imageUrl: "/daemawiki-project-image.png",
       isActive: false,
       links: [
@@ -97,10 +86,10 @@ export const portfolioData: PortfolioData = {
       title: "FOUNDERZ",
       tagline: "청년 창업가와 투자자를 연결하는 종합 플랫폼",
       period: "2024.05 ~ 2024.11",
-      description: `FOUNDERZ는 청년 창업가와 투자자를 연결하는 종합 플랫폼입니다. 
-      아이디어 게시, 투자 계약 자동화, 법적 서류 관리 등 창업 과정의 복잡성을 간소화합니다. 
-      투명한 투자 관리와 맞춤형 추천 시스템을 통해 안전하고 
-      효율적인 창업 생태계를 구축하며, 청년 창업가들의 성공적인 창업을 지원합니다. 
+      description: `FOUNDERZ는 청년 창업가와 투자자를 연결하는 종합 플랫폼입니다.
+      아이디어 게시, 투자 계약 자동화, 법적 서류 관리 등 창업 과정의 복잡성을 간소화합니다.
+      투명한 투자 관리와 맞춤형 추천 시스템을 통해 안전하고
+      효율적인 창업 생태계를 구축하며, 청년 창업가들의 성공적인 창업을 지원합니다.
       창업과 투자의 모든 단계를 한 곳에서 해결할 수 있는 플랫폼입니다.`,
       contributions: [
         "Domain Driven Design 기반 도메인 설계",
@@ -113,14 +102,14 @@ export const portfolioData: PortfolioData = {
         "백엔드 개발 가이드 작성"
       ],
       retrospective: `도메인 주도 설계를 처음 적용했을 땐, 책과 블로그에서 본 개념을 그대로 가져와 사용했습니다. 하지만 결과적으로 불필요하게 복잡한 구조를 만들었고, 팀원 간 소통에도 문제가 생겨 개발 초기 안정성이 떨어지는 아쉬움이 있었습니다.
-      
+
       이 경험을 통해 ‘기술을 도입할 때 무엇을 해결하고 싶은지, 서비스에 어떻게 기여를 하는지’를 먼저 고민해야 한다는 것을 배웠습니다.
-      
+
       이후에는 우리 팀의 개발 방식에 적합한 개념만 선별하고 단순화해 적용했습니다.또한, Gradle 멀티 모듈 구조를 도입할 때는 팀원들의 이해를 돕기 위해 개발 가이드를 직접 문서화하고 공유했습니다.
 
       이 과정을 통해 기술의 난이도보다 팀이 함께 이해하고 유지할 수 있는 구조가 더 중요하다는 사실을 체감했고, 기술 도입의 관점을 실무적으로 바꿀 수 있었습니다.`,
       technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "Redis", "Paseto"],
-      
+
       imageUrl: "/founderz-project-image.png",
       isActive: false,
       links: [
@@ -134,7 +123,7 @@ export const portfolioData: PortfolioData = {
       tagline: "AI 기반 이별 후유증 극복 서비스",
       period: "2025.03 ~ 2025.06",
       description: `HHH는 AI 기반 이별 후유증 극복 서비스로 개인화된 감정 관리 앱을 제공합니다.
-      사용자의 감정을 체계적으로 기록하고 시각화하여 감정 변화를 인식하도록 돕고, 
+      사용자의 감정을 체계적으로 기록하고 시각화하여 감정 변화를 인식하도록 돕고,
       이별 후 감정 회복을 위한 맞춤형 가이드를 제공하여 심리적 안정감을 증진합니다.`,
       contributions: [
         "서비스 기획",
@@ -146,7 +135,7 @@ export const portfolioData: PortfolioData = {
         "감정 이모지 관리 API 개발",
       ],
       technologies: ["Kotlin", "Spring WebFlux", "Spring Security", "MongoDB", "Paseto"],
-      
+
       imageUrl: "/hhh-project-image.png",
       isActive: false,
       links: [
@@ -157,16 +146,24 @@ export const portfolioData: PortfolioData = {
   ],
   techStack: [
     {
-      category: "Languages",
-      technologies: ["Java", "Kotlin", "TypeScript"]
+      category: "Core Backend",
+      technologies: ["Java", "Spring Boot", "Spring GraphQL", "REST"]
     },
     {
-      category: "Frameworks",
-      technologies: ["Spring Boot", "Spring Security", "Spring Webflux", "Hibernate"]
+      category: "Data & Consistency",
+      technologies: ["MySQL", "MyBatis", "JDBC", "Redis"]
     },
     {
-      category: "Database",
-      technologies: ["MySQL", "MongoDB", "Redis"]
+      category: "Event & Cloud",
+      technologies: ["Kafka", "AWS S3", "SES", "IAM", "KMS"]
+    },
+    {
+      category: "Test & Delivery",
+      technologies: ["JUnit", "Mockito", "MySQL Integration Test", "Unleash"]
+    },
+    {
+      category: "Additional Experience",
+      technologies: ["Kotlin", "Spring WebFlux", "MongoDB", "React", "TypeScript"]
     }
   ],
   education: [
@@ -178,29 +175,21 @@ export const portfolioData: PortfolioData = {
   ],
   awards: [
     {
-      title: "해커톤 대상 (과학기술정보통신부 장관상)",
+      title: "해커톤 수상 · 과학기술정보통신부 장관상",
       period: "2024.10",
-      description: "금상 (1위)",
-      details: "(주)서북에서 제시한 과제인 AI 기반 포토이즘 서비스의 백엔드 개발 담당",
+      description: "기업 제시 과제의 서비스 백엔드 개발 담당",
       icon: "🏆"
     },
     {
-      title: "대회 참여",
-      period: "",
-      description: `* 대한민국 소프트웨어대전 소프트웨이브 2024 프로젝트 전시
-      * Software Future & Dream Challenge 2024 본선 진출
-      * 2024 빛가람 에너지밸리 소프트웨어 작품 경진대회 본선 진출`,
+      title: "신입생 전공 멘토링",
+      period: "2025.03",
+      description: "약 23시간, 신입생 약 64명 대상",
       icon: "👨‍💻"
     },
     {
-      title: "교내 신입생 전공 분야 멘토링",
-      period: "2025.03",
-      description: "약 23시간, 신입생 약 64명 멘토링 진행"
-    },
-    {
-      title: "스프링 웹 플럭스 스터디 운영",
+      title: "Spring WebFlux 스터디 운영",
       period: "2024.08 ~ 2024.11",
-      description: "주 1회 스터디 진행, 멤버 5명 관리",
+      description: "주 1회, 5명 규모",
       icon: "👥"
     }
   ],
@@ -208,7 +197,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "TOPCIT",
       date: "2024",
-      description: "소프트웨어 역량 검정 수준 3 (595점)",
+      description: "수준 3 · 595점",
       icon: "📜"
     },
     {
@@ -218,9 +207,7 @@ export const portfolioData: PortfolioData = {
       icon: "📜"
     }
   ],
-  portfolioLinks: [
-    { label: "Notion 포트폴리오", url: "https://seungwon-portfolio.notion.site" }
-  ],
+  portfolioLinks: [],
   portfolioFiles: [
     { label: "PDF 다운로드", fileUrl: "/portfolio.pdf" }
   ],
@@ -231,27 +218,33 @@ export const portfolioData: PortfolioData = {
       repoUrl: "https://github.com/redis/lettuce",
       prs: [
         {
+          title: "#3423",
+          date: "2025.09.13",
+          description: "고급 사용법과 시작 안내 문서의 오탈자와 문장을 교정",
+          url: "https://github.com/redis/lettuce/pull/3423"
+        },
+        {
           title: "#3266",
           date: "2025.08.08",
-          description: "인스턴스화로 인한 메모리 낭비를 방지하고, 코드 안정성 향상",
+          description: "세 유틸리티 클래스의 생성자를 private으로 제한해 인스턴스화를 방지",
           url: "https://github.com/redis/lettuce/pull/3266"
         },
         {
           title: "#3264",
           date: "2025.05.28",
-          description: "Enum을 사용해 정규식 패턴을 그룹화하여 코드 구성과 안정성을 개선",
+          description: "정규식 패턴을 enum으로 묶어 타입 안전성과 가독성을 개선",
           url: "https://github.com/redis/lettuce/pull/3264"
         },
         {
           title: "#3262",
           date: "2025.04.23",
-          description: "불필요한 컬렉션 생성을 제거하여 메모리 할당 없이 성능 향상",
+          description: "중간 List 생성을 제거해 불필요한 메모리 할당을 줄임",
           url: "https://github.com/redis/lettuce/pull/3262"
         },
         {
           title: "#3061",
           date: "2025.01.06",
-          description: "Stream API, flatMapMany(Flux::fromIterable)을 사용해 Functional하게 처리",
+          description: "Reactive mget의 수동 반복문을 Stream과 Reactor 체인으로 단순화",
           url: "https://github.com/redis/lettuce/pull/3061"
         }
       ]
@@ -264,7 +257,7 @@ export const portfolioData: PortfolioData = {
         {
           title: "#6073",
           date: "2024.11.25",
-          description: "instanceof 패턴 매칭을 사용해 코드 일관성 향상",
+          description: "34개 파일의 instanceof 사용을 패턴 매칭 문법으로 통일",
           url: "https://github.com/kestra-io/kestra/pull/6073"
         }
       ]
@@ -276,8 +269,8 @@ export const portfolioData: PortfolioData = {
       prs: [
         {
           title: "#49",
-          date: "2024.10.08",
-          description: "화이트 모드 text 요소 에러 수정",
+          date: "2024.08.11",
+          description: "라이트 모드에서 보이지 않던 팔로우 텍스트 스타일 수정",
           url: "https://github.com/velog-io/velog/pull/49"
         }
       ]
@@ -288,55 +281,58 @@ export const portfolioData: PortfolioData = {
       company: "ktown4u",
       position: "Backend Engineer",
       period: "2025.08 ~ 현재",
+      description: "2025년 8월 Java/Spring 백엔드 개발자로 합류해 설정 이관과 환율 데이터 전환 기반을 마련했고, 이후 커머스 주문·결제, 회원, 바우처와 개인정보 라이프사이클 관련 기능을 개발했습니다. 스키마와 SQL부터 API, 이벤트 처리, 배치, 운영 화면까지 맡았습니다.",
       principles: [
-        "영향 범위가 큰 변경은 기존 경로를 즉시 제거하기보다 신규 경로를 병행 적용하고, feature flag, 비교 로그, 회귀 테스트로 동작 차이를 확인한 뒤 전환했습니다.",
-        "환율 조회, 사용자 인증처럼 운영 리스크가 큰 작업은 Strangler Fig/Parallel Run 방식으로 기존 시스템을 감싸며 단계적으로 대체하는 것을 지향합니다."
+        "개발 전 바뀌지 말아야 할 규칙과 운영 중 달라질 정책을 나눕니다. 규칙은 트랜잭션·원장·행 잠금으로 보호하고, 정책은 별도 객체와 설정으로 분리합니다.",
+        "동시 실행·중간 실패·재시도·소급 처리 뒤 실제 MySQL에 남은 결과를 확인합니다."
       ],
       companyLogoUrl: "/ktown4u_logo.png",
       highlights: [
         {
-          title: "개인정보보호/ISMS 대응",
+          title: "바우처 원장 신규 개발과 기존 예치금 결제 연계",
+          summary: "바우처의 발급·사용·복원·회수를 신규 거래로 누적하는 원장을 설계했습니다. 원거래를 수정하지 않고 참조 원장 ID로 사용과 복원을 연결했습니다.",
           items: [
-            "회원 탈퇴 이벤트, 개인정보 S3 아카이빙/익명화, 활성회원 법적 보존기간 삭제 배치와 종료 이벤트 참여 이력 익명화 구현",
-            "대량 개인정보 변경은 chunk/limit 기반 backfill, 일별 처리, 커서 전진 검증, 누락 컬럼 보정으로 재실행 가능한 흐름으로 구성"
+            "주문·바우처 사용 원장·결제 이력을 한 트랜잭션에 묶고, 행 잠금으로 동시 사용과 복원 합계 초과를 제어했습니다. 중간 저장 실패와 복원 요청 경합 뒤의 실제 DB 결과를 검증했습니다.",
+            "기존 예치금 원장에는 주문 사용과 결제 이력, 주문 취소 복구, PG·예치금 혼합 환불 배분을 연결했습니다. 주문·환불 식별자에서 결정적 복구 ID를 만들어 같은 요청의 재시도를 한 거래로 처리했습니다."
           ]
         },
         {
-          title: "사용자 약관 동의/안내 메일 체계",
+          title: "탈퇴 회원 개인정보 보존과 소급 처리",
+          summary: "보존 대상 데이터를 S3에 동기 업로드한 뒤에만 개인정보를 익명화했습니다. 업로드가 실패하면 익명화하지 않는 경로도 테스트했습니다.",
           items: [
-            "약관/마케팅 수신 동의 저장은 dual-write와 fallback 제거를 단계적으로 적용",
-            "AWS SES SDK 전환과 AssumeRole 기반 발신 분리는 smoke/probe 테스트로 검증한 뒤 테스트용 경로를 제거하며 안정화"
+            "소급 데이터는 실제 탈퇴 시각으로 보존 만료일과 저장 경로를 계산했습니다.",
+            "실행 중 발견한 기간 계산 오류는 작업을 중단한 뒤 정확한 만료 시각 비교와 경계 회귀 테스트로 수정하고 재개했습니다."
           ]
         },
         {
-          title: "주문·결제·쿠폰",
+          title: "주기적 수신동의 고지 파이프라인",
+          summary: "고객과 2년 주기를 업무 키로 삼아 대상 이벤트의 중복 생성을 막고, 발송 직전에 현재 회원 상태·동의·수신자를 다시 조회했습니다.",
           items: [
-            "주문서와 주문 생성 금액 불일치를 재현 테스트로 고정하고, 쿠폰 환율/관세 계산 기준을 통일",
-            "강제 전달 쿠폰에 사용자/상품/카테고리/최소금액 재검증을 추가하고, PayPal 로그와 운영 추적성을 함께 개선"
+            "성공·실패·제외 상태를 구분하고 실패 기록은 별도 트랜잭션으로 보존했습니다.",
+            "대량 고지용 SES 자격증명을 기존 거래 메일과 분리했습니다."
           ]
         },
         {
-          title: "배송·상품 운영 기능",
-          items: [
-            "배송대기 관리 GraphQL API와 백오피스 조회/등록 화면을 인수 테스트와 함께 개발하고, 엑셀 업로드/기간 변경/즉시 종료 지원",
-            "껍데기 상품 기준 배송대기 조건과 상품/아이템 dimension dual-write처럼 운영 데이터 정합성이 깨지기 쉬운 지점을 보완"
-          ]
+          title: "최악 실행계획을 겨냥한 쿼리 변경",
+          summary: "반복 탐색이 폭증할 수 있는 상관 서브쿼리를 제외 집합 CTE와 anti-join으로 바꿨습니다. 여러 상점의 결과 동치와 EXPLAIN ANALYZE에서 제외 집합이 한 번만 계산되는 것을 확인했습니다."
         },
         {
-          title: "B2B/백오피스 개선",
-          items: [
-            "B2B 한국/글로벌 상점 분리는 로그인 요청, 토큰 기반 shopNo, 상점별 데이터 조회와 UI 분기를 단계적으로 적용",
-            "B2B 스케줄 캘린더, 공지 에디터, 상품 조회 선택/비고 UI, 배너 수정 기능 등 운영 화면 사용성 개선"
-          ]
+          title: "레거시 회원 관리 기능 이관",
+          summary: "C# 운영자 도구의 회원 목록·상세·수정·생성·고객 동의를 Java/Spring·GraphQL 시스템으로 기능별 이관했습니다. 개인정보 조회 범위와 수정 권한, 계정 생성과 동의 후 활성화를 분리했습니다."
         },
         {
-          title: "플랫폼 운영 기반",
-          items: [
-            "Unleash 적용 과정에서 profile별 구현체, local stub, timeout, prefix 정책을 정리하고 기존 AppConfig 코드와 IaC를 제거",
-            "Okta cutover, Kafka retry topic 축소, 스케줄러 이벤트 위임, K8s 라우팅, DMS/Databricks/CI 매핑 변경을 점진 적용"
-          ]
+          title: "세트 상품 주문 금액 정합성",
+          summary: "주문서와 주문 생성에서 달랐던 환산·반올림 순서를 맞추고, 두 경로의 세트 상품 가격이 일치하는 회귀 테스트를 추가했습니다."
+        },
+        {
+          title: "설정·환율 데이터 전환 기반",
+          summary: "한 백엔드 서비스의 Feature Flag 경로를 AWS AppConfig에서 Unleash로 옮기고, 실행 프로파일과 타임아웃 설정을 정리했습니다. 신규 환율 이력 적재 경로와 기존 API 결과 비교 로그를 추가해 단계적으로 전환할 수 있는 기반을 마련했습니다."
+        },
+        {
+          title: "사용자 기기·알림 설정 API",
+          summary: "사용자 기기 등록·해제·알림 설정 API를 만들고 DB 저장과 upsert로 재등록과 설정 변경을 처리했습니다."
         }
       ]
     }
-  ],
-}; 
+  ]
+};

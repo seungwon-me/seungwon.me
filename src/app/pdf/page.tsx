@@ -1,8 +1,5 @@
-"use client";
-import { portfolioData } from "@/data/portfolio";
 import { HeroSection } from "./components/hero-section";
 import { ProjectsSection } from "./components/projects-section";
-import { Section } from "./components/Section";
 import { TechStackSection } from "./components/tech-stack-section";
 import { EducationSection } from "./components/education-section";
 import { AwardsSection } from "./components/awards-section";
@@ -16,37 +13,33 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Section */}
-      <Section title="About">
-        <p className="text-base md:text-lg text-[var(--text-secondary)] whitespace-pre-line max-w-3xl">
-          {portfolioData.about}
-        </p>
-      </Section>
-
       {/* Career Section */}
       <CareerSection />
 
-      {/* Projects Section */}
-      <ProjectsSection />
-
       {/* Tech Stack & Open Source Section */}
-      <div className="break-before pt-12">
+      <div className="break-before pt-12" data-testid="pdf-tech-page">
         <TechStackSection />
         <div className="my-12" />
-          {/* Certifications Section */}
-          <CertificationsSection />
-      </div>
         <OpenSourceSection />
-
-        {/* Education Section */}
-        <EducationSection />
+      </div>
 
       {/* Awards & Activities Section */}
       <AwardsSection />
 
-        <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
-            <p>No Silver Bullet in Software Engineering.</p>
-        </footer>
+      {/* Education Section */}
+      <EducationSection />
+
+      {/* Certifications Section */}
+      <CertificationsSection />
+
+      {/* Projects Appendix */}
+      <div className="break-before pt-12 print:hidden" data-testid="pdf-projects-appendix">
+        <ProjectsSection />
+      </div>
+
+      <footer className="text-center text-sm text-[var(--text-secondary)] py-8">
+        <p>No Silver Bullet in Software Engineering.</p>
+      </footer>
     </main>
   );
 }
