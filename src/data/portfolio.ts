@@ -5,7 +5,9 @@ export const portfolioData: PortfolioData = {
   title: "Backend Engineer",
   subtitle: `실패 이후에도 데이터가 맞는 애플리케이션을 만듭니다.
 
-결제와 개인정보 처리와 같이 실패 비용이 큰 도메인에서 동시 실행·중간 실패·재시도·소급 처리 이후에도 지켜야 할 불변식을 검증해왔습니다.`,
+결제와 개인정보 처리와 같이 실패 비용이 큰 도메인에서 동시 실행·중간 실패·재시도·소급 처리 이후에도 지켜야 할 불변식을 검증해왔습니다.
+
+산업기능요원 현역 신규 편입을 희망하며, 정보처리기능사를 보유하고 있습니다.`,
   contact: {
     email: "hello@seungwon.me",
     github: "github.com/ori0o0p",

@@ -50,9 +50,21 @@ test("home project modal visual", async ({ page }) => {
     has: page.getByRole("heading", { name: "Side Projects", exact: true }),
   });
   await expect(projectsSection).toBeVisible();
-  await projectsSection.locator("div.cursor-pointer.group").first().click();
+  const firstProjectCard = projectsSection.getByRole("button", {
+    name: "REPO 프로젝트 상세 보기",
+  });
+  await expect(firstProjectCard).toBeVisible();
+  await firstProjectCard.focus();
+  await firstProjectCard.press("Enter");
   const modalCloseButton = page.locator('button[aria-label="Close project details"]');
   await expect(modalCloseButton).toBeVisible();
-  const modalCard = page.locator("div.max-w-5xl.w-full").first();
+  const modalCard = page.getByRole("dialog");
+  await expect(modalCard).toHaveAttribute("aria-modal", "true");
+  await expect(modalCard).toHaveAttribute("aria-labelledby", /.+/);
+  await expect(modalCloseButton).toBeFocused();
   await expect(modalCard).toHaveScreenshot("home-project-modal.png");
+
+  await page.keyboard.press("Escape");
+  await expect(modalCard).toHaveCount(0);
+  await expect(firstProjectCard).toBeFocused();
 });

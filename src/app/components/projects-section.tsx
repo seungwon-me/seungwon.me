@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
@@ -9,9 +9,11 @@ import { Github, Link as LinkIcon, X } from "lucide-react";
 
 function ProjectCard({ project, onSelect }: { project: Project; onSelect: () => void; }) {
   return (
-    <motion.div
+    <motion.button
+      type="button"
       onClick={onSelect}
-      className="relative h-60 rounded-[12px] overflow-hidden cursor-pointer group"
+      aria-label={`${project.title} 프로젝트 상세 보기`}
+      className="relative block h-60 w-full appearance-none rounded-[12px] border-0 bg-transparent p-0 text-left overflow-hidden cursor-pointer group"
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     >
       <Image
@@ -30,22 +32,88 @@ function ProjectCard({ project, onSelect }: { project: Project; onSelect: () => 
           {project.tagline}
         </p>
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
 
 function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDeselect: () => void; }) {
+  const titleId = useId();
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const previousActiveElement = document.activeElement as HTMLElement | null;
+    const previousBodyOverflow = document.body.style.overflow;
+    const focusableSelector = [
+      'a[href]',
+      'button:not([disabled])',
+      'textarea:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(',');
+
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onDeselect();
+        return;
+      }
+
+      if (event.key !== "Tab" || !dialogRef.current) return;
+
+      const focusableElements = Array.from(
+        dialogRef.current.querySelectorAll<HTMLElement>(focusableSelector),
+      );
+      if (focusableElements.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousBodyOverflow;
+      previousActiveElement?.focus();
+    };
+  }, [onDeselect]);
+
   return (
-    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={onDeselect}>
+    <div
+      className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onDeselect();
+      }}
+    >
       <motion.div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        tabIndex={-1}
         className="relative max-w-5xl w-full max-h-[90vh] bg-[var(--bg-secondary)] rounded-2xl overflow-hidden shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.98, y: 8 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.98, y: 8 }}
         transition={{ duration: 0.2, ease: 'easeOut' }}
       >
         <motion.button 
+          ref={closeButtonRef}
           onClick={onDeselect} 
           className="absolute top-4 right-4 text-white/70 hover:text-white z-20 bg-black/30 rounded-full p-2 transition-colors"
           aria-label="Close project details"
@@ -64,7 +132,7 @@ function ExpandedProjectCard({ project, onDeselect }: { project: Project; onDese
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
              <div className="absolute bottom-0 left-0 p-8">
-              <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
+              <h3 id={titleId} className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
                 {project.title}
               </h3>
               <p className="text-lg text-gray-200 mt-2">
