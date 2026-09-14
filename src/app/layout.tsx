@@ -5,9 +5,9 @@ import ScrollStatusIndicator from "@/app/scroll-status-indicator";
 import { Header } from "./Header";
 
 const siteUrl = "https://seungwon.me";
-const siteTitle = "김승원 | Backend Developer";
+const siteTitle = "김승원 | Backend Engineer";
 const siteDescription =
-  "사용자 경험의 본질을 찾는 백엔드 개발자 김승원의 포트폴리오";
+  "결제와 개인정보처럼 실패 비용이 큰 영역에서 데이터 정합성을 다루는 Backend Engineer 김승원의 포트폴리오";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -16,9 +16,10 @@ export const metadata: Metadata = {
   keywords: [
     "김승원",
     "백엔드 개발자",
-    "Backend Developer",
+    "Backend Engineer",
     "Spring",
-    "WebFlux",
+    "MySQL",
+    "데이터 정합성",
     "Portfolio",
   ],
   alternates: {

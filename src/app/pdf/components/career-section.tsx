@@ -53,7 +53,7 @@ export function CareerSection() {
                     {career.highlights.map((highlight) => (
                       <div
                         key={highlight.title}
-                        className="border-t border-[var(--border)] pt-4"
+                        className="break-inside-avoid border-t border-[var(--border)] pt-4"
                       >
                         <p className="text-sm font-semibold text-[var(--text-primary)] break-keep">
                           {highlight.title}

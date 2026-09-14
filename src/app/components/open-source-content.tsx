@@ -6,19 +6,6 @@ type OpenSourceContentProps = {
   isPdf?: boolean;
 };
 
-const getRepoRootUrl = (repoUrl?: string): string | undefined => {
-  if (!repoUrl) {
-    return undefined;
-  }
-
-  try {
-    const parsed = new URL(repoUrl);
-    return `${parsed.protocol}//${parsed.hostname}`;
-  } catch {
-    return repoUrl.split("/").slice(0, 4).join("/");
-  }
-};
-
 const getPrTitleClassName = (isPdf: boolean): string => {
   if (isPdf) {
     return "text-lg font-bold !text-[var(--text-secondary)]";
@@ -45,14 +32,12 @@ export function OpenSourceContent({ repos, isPdf = false }: OpenSourceContentPro
   return (
     <div className="space-y-8">
       {repos?.map((repo) => {
-        const repoRootUrl = getRepoRootUrl(repo.repoUrl);
-
         return (
           <div key={repo.repoName} className="">
             <div className="flex items-center gap-3 mb-2">
               {repo.repoLogoUrl &&
-                (repoRootUrl ? (
-                  <a href={repoRootUrl} target="_blank" rel="noopener noreferrer">
+                (repo.repoUrl ? (
+                  <a href={repo.repoUrl} target="_blank" rel="noopener noreferrer">
                     <Image
                       src={repo.repoLogoUrl}
                       alt={`${repo.repoName} logo`}
